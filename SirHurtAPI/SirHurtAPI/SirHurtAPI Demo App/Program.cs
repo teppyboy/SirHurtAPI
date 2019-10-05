@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -42,7 +43,25 @@ namespace SirHurtAPI_Demo_App
             {
                 Console.WriteLine("SirHurtAPI.dll - NOT FOUND");
                 Console.WriteLine("Downloading SirHurtAPI.dll");
-                //...
+                var wc = new WebClient();
+                try
+                {
+                    wc.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll","SirHurtAPI.dll");
+                }
+                catch (Exception ex)
+                {
+                    string reason;
+                    if (ex.ToString().Contains("Timed out"))
+                    {
+                        reason = "Connection timed out.";
+                    }
+                    else
+                    {
+                        reason = "Unknown, please give log and create a issue in SirHurtAPI Github.";
+                    }
+                    MessageBox.Show("Couldn't download SirHurtAPI.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
+                    Environment.Exit(0);
+                }
                 Console.WriteLine("Downloaded.");
                 Console.WriteLine("======================================");
             }
