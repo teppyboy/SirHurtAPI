@@ -1,0 +1,5 @@
+C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\SirHurtAPI.dll
+C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\SirHurtAPI.pdb
+C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csprojAssemblyReference.cache
+C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.dll
+C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.pdb

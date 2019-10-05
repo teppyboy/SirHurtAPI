@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirHurtAPI", "SirHurtAPI\SirHurtAPI.csproj", "{7119968B-3EC1-4884-AFA5-01BD6DC5B0BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SirHurtAPI Demo App", "SirHurtAPI Demo App\SirHurtAPI Demo App.csproj", "{DF95C790-89FF-44E3-884C-C81723085641}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7119968B-3EC1-4884-AFA5-01BD6DC5B0BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7119968B-3EC1-4884-AFA5-01BD6DC5B0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7119968B-3EC1-4884-AFA5-01BD6DC5B0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7119968B-3EC1-4884-AFA5-01BD6DC5B0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF95C790-89FF-44E3-884C-C81723085641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF95C790-89FF-44E3-884C-C81723085641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF95C790-89FF-44E3-884C-C81723085641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF95C790-89FF-44E3-884C-C81723085641}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79FA2CC0-A145-4DB5-83BD-750840C465B4}
+	EndGlobalSection
+EndGlobal
