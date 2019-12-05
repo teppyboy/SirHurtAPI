@@ -15,14 +15,6 @@ namespace SirHurtAPI_Demo_App
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [DllImport("kernel32.dll")]
-        public static extern IntPtr GetConsoleWindow();
-
-        [DllImport("user32.dll")]
-        public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-
-        public const int SW_HIDE = 0;
-        public const int SW_SHOW = 5;
         [STAThread]
         static void Main()
         {
@@ -47,6 +39,7 @@ namespace SirHurtAPI_Demo_App
                 try
                 {
                     wc.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll","SirHurtAPI.dll");
+                    wc.Dispose();
                 }
                 catch (Exception ex)
                 {
@@ -65,8 +58,7 @@ namespace SirHurtAPI_Demo_App
                 Console.WriteLine("Downloaded.");
                 Console.WriteLine("======================================");
             }
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Console.WriteLine("Please keep this console open, if close then the UI will be closed too.");
             Application.Run(new MainForm());
         }
     }
