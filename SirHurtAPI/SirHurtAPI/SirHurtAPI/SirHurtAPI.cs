@@ -65,7 +65,7 @@ namespace SirHurtAPI
                 MessageBox.Show("Couldn't download SirHurt.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
             }
         }
-        public static void LaunchExploit()
+        public static void LaunchExploit() //Why LaunchExploit? because some ppl are used to make exploit using weareretarded api so yea.
         {
             if (!Injected)
             {
