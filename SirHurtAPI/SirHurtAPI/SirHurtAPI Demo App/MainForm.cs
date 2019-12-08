@@ -31,5 +31,10 @@ namespace SirHurtAPI_Demo_App
         {
             scriptBox.Clear();
         }
+
+        private void EFF_Click(object sender, EventArgs e)
+        {
+            SirHurtAPI.SirHurtAPI.ExecuteFromFile();
+        }
     }
 }

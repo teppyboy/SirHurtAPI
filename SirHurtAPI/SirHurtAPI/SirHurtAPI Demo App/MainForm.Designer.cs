@@ -32,6 +32,7 @@
             this.InjectBtn = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.Execute = new System.Windows.Forms.Button();
+            this.EFF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // scriptBox
@@ -67,17 +68,28 @@
             // 
             this.Execute.Location = new System.Drawing.Point(93, 424);
             this.Execute.Name = "Execute";
-            this.Execute.Size = new System.Drawing.Size(614, 23);
+            this.Execute.Size = new System.Drawing.Size(307, 23);
             this.Execute.TabIndex = 3;
             this.Execute.Text = "Execute";
             this.Execute.UseVisualStyleBackColor = true;
             this.Execute.Click += new System.EventHandler(this.Execute_Click);
+            // 
+            // EFF
+            // 
+            this.EFF.Location = new System.Drawing.Point(406, 424);
+            this.EFF.Name = "EFF";
+            this.EFF.Size = new System.Drawing.Size(301, 23);
+            this.EFF.TabIndex = 4;
+            this.EFF.Text = "Execute from file";
+            this.EFF.UseVisualStyleBackColor = true;
+            this.EFF.Click += new System.EventHandler(this.EFF_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EFF);
             this.Controls.Add(this.Execute);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.InjectBtn);
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button InjectBtn;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Execute;
+        private System.Windows.Forms.Button EFF;
     }
 }
 
