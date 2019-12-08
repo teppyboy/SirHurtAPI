@@ -1,6 +1,4 @@
 os: windows
 language: csharp
-mono:
-  - latest
 script:
   - msbuild /p:Configuration=Debug SirHurtAPI.sln
