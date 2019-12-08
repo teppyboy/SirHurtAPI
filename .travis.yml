@@ -1,8 +1,7 @@
 os: windows
 language: csharp
-mono:
-  - latest
-  - 3.12.0
-  - 3.10.0
+mono: none
+dotnet: 2.1.502
 script:
+  - dotnet restore
   - msbuild /p:Configuration=Debug SirHurtAPI.sln
