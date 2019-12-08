@@ -1,4 +1,6 @@
+os: windows
 language: csharp
-solution: SirHurtAPI.sln
+mono:
+  - latest
 script:
-- msbuild /p:Configuration=Debug SirHurtAPI.sln
+  - msbuild /p:Configuration=Debug SirHurtAPI.sln
