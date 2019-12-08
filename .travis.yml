@@ -1,5 +1,5 @@
-os: windows
+os: linux
 language: csharp
-mono: 6.4.0
+mono: latest
 script:
   - msbuild /p:Configuration=Debug SirHurtAPI.sln
