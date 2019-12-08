@@ -2,4 +2,4 @@ os: linux
 language: csharp
 mono: latest
 script:
-  - cd SirHurtAPI && msbuild /p:Configuration=Debug SirHurtAPI.sln
+  - cd SirHurtAPI/SirHurtAPI && msbuild /p:Configuration=Debug SirHurtAPI.sln
