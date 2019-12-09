@@ -33,14 +33,15 @@
             this.Clear = new System.Windows.Forms.Button();
             this.Execute = new System.Windows.Forms.Button();
             this.EFF = new System.Windows.Forms.Button();
+            this.oof123 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // scriptBox
             // 
             this.scriptBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.scriptBox.Location = new System.Drawing.Point(1, 0);
+            this.scriptBox.Location = new System.Drawing.Point(1, 28);
             this.scriptBox.Name = "scriptBox";
-            this.scriptBox.Size = new System.Drawing.Size(798, 418);
+            this.scriptBox.Size = new System.Drawing.Size(798, 390);
             this.scriptBox.TabIndex = 0;
             this.scriptBox.Text = "--This is an app using SirHurtAPI.\n";
             // 
@@ -84,11 +85,22 @@
             this.EFF.UseVisualStyleBackColor = true;
             this.EFF.Click += new System.EventHandler(this.EFF_Click);
             // 
+            // oof123
+            // 
+            this.oof123.Location = new System.Drawing.Point(1, 2);
+            this.oof123.Name = "oof123";
+            this.oof123.Size = new System.Drawing.Size(798, 23);
+            this.oof123.TabIndex = 5;
+            this.oof123.Text = "Auto Inject: False";
+            this.oof123.UseVisualStyleBackColor = true;
+            this.oof123.Click += new System.EventHandler(this.oof123_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.oof123);
             this.Controls.Add(this.EFF);
             this.Controls.Add(this.Execute);
             this.Controls.Add(this.Clear);
@@ -97,6 +109,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "SirHurtAPI Demo Application";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
 
         }
@@ -108,6 +121,7 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Execute;
         private System.Windows.Forms.Button EFF;
+        private System.Windows.Forms.Button oof123;
     }
 }
 

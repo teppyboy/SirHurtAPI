@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SirHurtAPI
@@ -10,6 +11,7 @@ namespace SirHurtAPI
     public class SirHurtAPI
     {
         private static bool Injected = false;
+        private static bool autoInject = false;
         private static bool firstLaunch = true;
         private readonly static string DllName = "[SirHurtAPI]";
 
@@ -89,7 +91,6 @@ namespace SirHurtAPI
             bool returnval;
             if (!Injected)
             {
-                returnval = DownloadDll();
                 IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
                 if (Injected || intPtr == IntPtr.Zero)
                 {
@@ -98,12 +99,13 @@ namespace SirHurtAPI
                 int num = 0;
                 try
                 {
+                    returnval = DownloadDll();
                     num = Inject();
                     returnval = true;
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(DllName+string.Format("An error occured with injecting SirHurt: %s"+ ex.Message));
+                    Console.WriteLine(DllName+string.Format("An error occured with injecting SirHurt: "+ ex.Message));
                     returnval = false;
                     return false;
                 }
@@ -126,10 +128,46 @@ namespace SirHurtAPI
                 returnval = true;
             return returnval;
         }
-
-        private static void injectionCheckerThreadHandler()
+        public static bool GetAutoInject()
         {
-            for (; ; )
+            return autoInject;
+        }
+        public static bool AutoInjectToggle() //Why does everyone asking for this shit function ._.
+        {
+            if (!GetAutoInject())
+            {
+                autoInject = true;
+                autoIJ();
+                Console.WriteLine(DllName + "Enabled auto-inject");
+            }
+            else
+            {
+                autoInject = false;
+            }
+            return autoInject;
+        }
+
+        private static async Task autoIJ()
+        {
+            while (GetAutoInject())
+            {
+                await Task.Delay(100);
+                IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
+                if (Injected || intPtr == IntPtr.Zero)
+                {
+                    Console.WriteLine(DllName + "Injected or ROBLOX isn't running...");
+                }
+                else
+                {
+                    Console.WriteLine(DllName + "ROBLOX Found. Injecting...");
+                    LaunchExploit();
+                }
+            }
+        }
+
+        private static async Task injectionCheckerThreadHandler()
+        {
+            for (; ;)
             {
                 Application.DoEvents();
                 Thread.Sleep(100);
@@ -140,6 +178,8 @@ namespace SirHurtAPI
                 {
                     Execute("");
                     Injected = false;
+                    if (GetAutoInject())
+                        autoIJ();
                 }
             }
         }

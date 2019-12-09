@@ -36,5 +36,16 @@ namespace SirHurtAPI_Demo_App
         {
             SirHurtAPI.SirHurtAPI.ExecuteFromFile();
         }
+
+        private void oof123_Click(object sender, EventArgs e)
+        {
+            SirHurtAPI.SirHurtAPI.AutoInjectToggle();
+            oof123.Text = "Auto Inject: " + SirHurtAPI.SirHurtAPI.GetAutoInject().ToString();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
