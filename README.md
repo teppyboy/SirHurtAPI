@@ -12,6 +12,8 @@ bool LaunchExploit() - Download & Inject SirHurt V4, return true if sucess and f
 bool Execute(string script) - Execute a script, return true if sucess and false if not.
 bool DownloadDLL() - Download SirHurt V4 dll (and SirHurtInjector if not exist), return true if sucess and false if not.
 bool ExecuteFromFile() - Execute a script from a file, return true if sucess and false if not.
+bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
+bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
 ```
 ### Bugs (so don't judge me by not telling bugs)
 - Nothing (for now) 
@@ -27,6 +29,10 @@ bool ExecuteFromFile() - Execute a script from a file, return true if sucess and
 
 ### Changelog
 ```
+- v1.0.2.0
++ Added AutoInjectToggle()
++ Added GetAutoInject()
++ Optimized the dll.
 - v1.0.1.0:
 + Added ExecuteFromFile()
 + Optimized the dll.
