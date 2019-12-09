@@ -19,9 +19,18 @@ namespace SirHurtAPI_Demo_App
         [STAThread]
         static void Main()
         {
+            FileInfo fileInfo = new FileInfo(Assembly.GetExecutingAssembly().Location);
+            DateTime lastModified = fileInfo.LastWriteTime;
+            Console.Title = "SirHurtAPI Demo App Launcher";
+            Console.WriteLine("SirHurtAPI Demo App Launcher");
+            Console.WriteLine("Build: " + lastModified.ToShortDateString().Replace("/", ""));
+            Console.WriteLine("Build date: " + lastModified.ToString());
+            Console.WriteLine("======================================");
+            Console.WriteLine("Checking for required DLL...");
 
             if (!File.Exists("SirHurtAPI.dll"))
             {
+                console.WriteLine("SirHurt API Missing, Downloading now...")
                 var wc = new WebClient();
                 try
                 {
@@ -42,6 +51,8 @@ namespace SirHurtAPI_Demo_App
                     MessageBox.Show("Couldn't download SirHurtAPI.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
                     Environment.Exit(0);
                 }
+                Console.WriteLine("Downloaded.");
+                Console.WriteLine("======================================");
             } else
             {
                 // Update check
@@ -88,6 +99,7 @@ namespace SirHurtAPI_Demo_App
                 {
                     File.Delete("SirHurtAPI.temp");
                 }
+                Console.WriteLine("Please keep this console open, if close then the UI will be closed too.");
                 Application.Run(new MainForm());
             }
         }
