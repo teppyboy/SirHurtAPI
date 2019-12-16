@@ -90,7 +90,7 @@ namespace SirHurtAPI
         {
             bool returnval;
             IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
-            if (!Injected && intPtr == IntPtr.Zero)
+            if (!Injected)
             {
                 if (intPtr == IntPtr.Zero)
                 {
