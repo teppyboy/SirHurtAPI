@@ -89,10 +89,10 @@ namespace SirHurtAPI
         public static bool LaunchExploit() //Why LaunchExploit? because some ppl are used to make exploit using weareretarded api so yea.
         {
             bool returnval;
-            if (!Injected)
+            IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
+            if (!Injected && intPtr == IntPtr.Zero)
             {
-                IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
-                if (Injected || intPtr == IntPtr.Zero)
+                if (intPtr == IntPtr.Zero)
                 {
                     return true;
                 }
@@ -105,8 +105,8 @@ namespace SirHurtAPI
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(DllName+string.Format("An error occured with injecting SirHurt: "+ ex.Message));
-                    returnval = false;
+                    Console.WriteLine(DllName+"An error occured with injecting SirHurt: "+ ex.Message);
+                    Injected = false;
                     return false;
                 }
                 if (num != 0)
@@ -125,12 +125,24 @@ namespace SirHurtAPI
                 }
             }
             else
-                returnval = true;
+                return true;
             return returnval;
         }
         public static bool GetAutoInject()
         {
             return autoInject;
+        }
+        public static bool isInjected()
+        {
+            IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
+            if (intPtr == IntPtr.Zero)
+            {
+                return false;
+            }
+            else
+            {
+                return Injected;
+            }
         }
         public static bool AutoInjectToggle() //Why does everyone asking for this shit function ._.
         {
@@ -143,8 +155,9 @@ namespace SirHurtAPI
             else
             {
                 autoInject = false;
+                Console.WriteLine(DllName + "Disabled auto-inject");
             }
-            return autoInject;
+            return GetAutoInject();
         }
 
         private static async Task autoIJ()
@@ -179,7 +192,12 @@ namespace SirHurtAPI
                     Execute("");
                     Injected = false;
                     if (GetAutoInject())
+                    {
+                        autoInject = false;
+                        await Task.Delay(101);
+                        autoInject = true;
                         autoIJ();
+                    }
                 }
             }
         }

@@ -30,7 +30,7 @@ namespace SirHurtAPI_Demo_App
 
             if (!File.Exists("SirHurtAPI.dll"))
             {
-                console.WriteLine("SirHurt API Missing, Downloading now...")
+                Console.WriteLine("SirHurt API Missing, Downloading now...");
                 var wc = new WebClient();
                 try
                 {

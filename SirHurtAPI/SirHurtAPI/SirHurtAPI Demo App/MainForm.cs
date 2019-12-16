@@ -47,5 +47,10 @@ namespace SirHurtAPI_Demo_App
         {
             Environment.Exit(0);
         }
+
+        private void InjectedCheck_Tick(object sender, EventArgs e)
+        {
+            injectedstring.Text = "Injected: " + SirHurtAPI.SirHurtAPI.isInjected().ToString();
+        }
     }
 }

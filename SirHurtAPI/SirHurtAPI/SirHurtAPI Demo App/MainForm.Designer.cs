@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.scriptBox = new System.Windows.Forms.RichTextBox();
             this.InjectBtn = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
             this.Execute = new System.Windows.Forms.Button();
             this.EFF = new System.Windows.Forms.Button();
             this.oof123 = new System.Windows.Forms.Button();
+            this.injectedstring = new System.Windows.Forms.Label();
+            this.InjectedCheck = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // scriptBox
@@ -89,17 +92,32 @@
             // 
             this.oof123.Location = new System.Drawing.Point(1, 2);
             this.oof123.Name = "oof123";
-            this.oof123.Size = new System.Drawing.Size(798, 23);
+            this.oof123.Size = new System.Drawing.Size(719, 23);
             this.oof123.TabIndex = 5;
             this.oof123.Text = "Auto Inject: False";
             this.oof123.UseVisualStyleBackColor = true;
             this.oof123.Click += new System.EventHandler(this.oof123_Click);
+            // 
+            // injectedstring
+            // 
+            this.injectedstring.AutoSize = true;
+            this.injectedstring.Location = new System.Drawing.Point(726, 7);
+            this.injectedstring.Name = "injectedstring";
+            this.injectedstring.Size = new System.Drawing.Size(73, 13);
+            this.injectedstring.TabIndex = 6;
+            this.injectedstring.Text = "Injected: false";
+            // 
+            // InjectedCheck
+            // 
+            this.InjectedCheck.Enabled = true;
+            this.InjectedCheck.Tick += new System.EventHandler(this.InjectedCheck_Tick);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.injectedstring);
             this.Controls.Add(this.oof123);
             this.Controls.Add(this.EFF);
             this.Controls.Add(this.Execute);
@@ -111,6 +129,7 @@
             this.Text = "SirHurtAPI Demo Application";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -122,6 +141,8 @@
         private System.Windows.Forms.Button Execute;
         private System.Windows.Forms.Button EFF;
         private System.Windows.Forms.Button oof123;
+        private System.Windows.Forms.Label injectedstring;
+        private System.Windows.Forms.Timer InjectedCheck;
     }
 }
 
