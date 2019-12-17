@@ -56,7 +56,7 @@ namespace SirHurtAPI_Demo_App
             } else
             {
                 // Update check
-
+                /*
                 bool updateCheck()
                 {
                     var updateClient = new WebClient();
@@ -98,7 +98,7 @@ namespace SirHurtAPI_Demo_App
                 } else
                 {
                     File.Delete("SirHurtAPI.temp");
-                }
+                }*/ //Dev app
                 Console.WriteLine("Please keep this console open, if close then the UI will be closed too.");
                 Application.Run(new MainForm());
             }

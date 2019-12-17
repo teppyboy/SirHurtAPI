@@ -89,9 +89,13 @@ namespace SirHurtAPI
         public static bool LaunchExploit() //Why LaunchExploit? because some ppl are used to make exploit using weareretarded api so yea.
         {
             bool returnval;
-            IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
-            if (!isInjected())
+            if (!Injected)
             {
+                IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
+                if (intPtr == IntPtr.Zero)
+                {
+                    return false;
+                }
                 int num = 0;
                 try
                 {
@@ -130,15 +134,7 @@ namespace SirHurtAPI
         }
         public static bool isInjected()
         {
-            IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
-            if (intPtr == IntPtr.Zero)
-            {
-                return false;
-            }
-            else
-            {
-                return Injected;
-            }
+            return Injected;
         }
         public static bool AutoInjectToggle() //Why does everyone asking for this shit function ._.
         {

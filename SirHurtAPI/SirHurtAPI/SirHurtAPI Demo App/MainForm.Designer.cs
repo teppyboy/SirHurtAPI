@@ -101,7 +101,7 @@
             // injectedstring
             // 
             this.injectedstring.AutoSize = true;
-            this.injectedstring.Location = new System.Drawing.Point(723, 7);
+            this.injectedstring.Location = new System.Drawing.Point(726, 7);
             this.injectedstring.Name = "injectedstring";
             this.injectedstring.Size = new System.Drawing.Size(73, 13);
             this.injectedstring.TabIndex = 6;
