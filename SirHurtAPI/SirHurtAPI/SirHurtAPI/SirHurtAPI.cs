@@ -185,9 +185,6 @@ namespace SirHurtAPI
                     Injected = false;
                     if (GetAutoInject())
                     {
-                        autoInject = false;
-                        await Task.Delay(101);
-                        autoInject = true;
                         autoIJ();
                     }
                 }
