@@ -14,6 +14,7 @@ bool DownloadDLL() - Download SirHurt V4 dll (and SirHurtInjector if not exist),
 bool ExecuteFromFile() - Execute a script from a file, return true if sucess and false if not.
 bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
 bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
+bool isInjected() - Get injected status and return true = injected, false = not injected.
 ```
 ### Bugs (so don't judge me by not telling bugs)
 - Nothing (for now) 
@@ -29,6 +30,9 @@ bool GetAutoInject() - Get Auto inject status and return true = enabled, false =
 
 ### Changelog
 ```
+- v1.0.3.0
++ Added isInjected()
++ i got a fever sorry so only this buggy feature
 - v1.0.2.0
 + Added AutoInjectToggle()
 + Added GetAutoInject()
