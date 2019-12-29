@@ -17,7 +17,7 @@ bool GetAutoInject() - Get Auto inject status and return true = enabled, false =
 bool isInjected() - Get injected status and return true = injected, false = not injected.
 ```
 ### Bugs (so don't judge me by not telling bugs)
-- Nothing (for now) 
+- When enabled auto inject then quit RBX while injecting then the app will lag :/
 
 ### Old bugs (fixed now)
 - Won't auto-update sirhurt dll
@@ -28,7 +28,7 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 - Easier to make SirHurt V4 custom ui.
 - Gay code but works
 - DA WARUDOOOOOOOOOO
-- No axon (go check it its open source lol)
+- No axon (go check it its open source and theres no pipe lol)
 
 ### Changelog
 ```
