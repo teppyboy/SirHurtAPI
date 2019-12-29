@@ -30,6 +30,9 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 
 ### Changelog
 ```
+- v1.0.3.1
++ Fixed SSL/TLS issue on Windows 7 [Not tested XD]
++ Auto create Workspace folder when inject :P
 - v1.0.3.0
 + Added isInjected()
 + i got a fever sorry so only this buggy feature
