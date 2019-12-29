@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Net.Security;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +15,12 @@ namespace SirHurtAPI
         private static bool Injected = false;
         private static bool autoInject = false;
         private static bool firstLaunch = true;
+        private readonly static string ver = "1.0.3.1"; //Later because im lazy
         private readonly static string DllName = "[SirHurtAPI]";
-
+        private static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
+        {
+            return true;
+        }
         [DllImport("SirHurtInjector.dll")]
         private static extern int Inject();
         [DllImport("user32.dll", SetLastError = true)]
@@ -22,7 +28,7 @@ namespace SirHurtAPI
         [DllImport("user32.dll", SetLastError = true)]
         static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
         private static uint _injectionResult;
-        public static bool DownloadDll()
+        public static bool DownloadDll() // Why? because i will use this in my UI, TsuSploit.
         {
             bool returnval;
             if (!File.Exists("SirHurtInjector.dll"))
@@ -31,6 +37,9 @@ namespace SirHurtAPI
                 {
                     using (WebClient webClient = new WebClient())
                     {
+                        ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
+                        ServicePointManager.Expect100Continue = true;
+                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                         webClient.DownloadFile("https://asshurthosting.pw/asshurt/update/v4/SirHurtInjector.dll", "SirHurtInjector.dll");
                         Console.WriteLine(DllName + "Downloaded SirHurtInjector.dll");
                     } // Code from SirHurt Bootstrapper.
@@ -65,6 +74,9 @@ namespace SirHurtAPI
             {
                 using (WebClient webClient = new WebClient())
                 {
+                    ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
+                    ServicePointManager.Expect100Continue = true;
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                     webClient.DownloadFile("https://asshurthosting.pw/asshurt/update/v4/SirHurt.dll", "SirHurt.dll");
                     Console.WriteLine(DllName + "Downloaded SirHurt.dll");
                 } // Code from SirHurt Bootstrapper.
@@ -91,6 +103,7 @@ namespace SirHurtAPI
             bool returnval;
             if (!Injected)
             {
+                Directory.CreateDirectory("Workspace");
                 IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
                 if (intPtr == IntPtr.Zero)
                 {
