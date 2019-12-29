@@ -21,6 +21,8 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 
 ### Old bugs (fixed now)
 - Won't auto-update sirhurt dll
+- SSl/TLS issue on windows 7
+- some script write/read file error due to no workspace folder
 
 ### Features
 - Easier to make SirHurt V4 custom ui.
