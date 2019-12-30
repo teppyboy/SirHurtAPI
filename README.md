@@ -1,5 +1,6 @@
 # SirHurtAPI
  - An API that support SirHurt V4 for developers easier to make SirHurt V4 custom UI
+ - **THIS DOSEN'T GIVE YOU ABILITY TO USE SIRHURT FOR FREE**
  - Looking for API? [Here](https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll)
  - Looking for Demo App? [Here](https://github.com/teppyboy/SirHurtAPI/raw/master/SirHurtAPI/SirHurtAPI/SirHurtAPI%20Demo%20App/bin/Debug/SirHurtAPI%20Demo%20App.exe)
 ## How to use this API
@@ -10,7 +11,7 @@
 ```
 bool LaunchExploit() - Download & Inject SirHurt V4, return true if sucess and false if not.
 bool Execute(string script) - Execute a script, return true if sucess and false if not.
-bool DownloadDLL() - Download SirHurt V4 dll (and SirHurtInjector if not exist), return true if sucess and false if not.
+bool DownloadDLL(bool DownloadSirHurtInjector) - Download SirHurt V4 dll (and SirHurtInjector if not exist + boolean is true), return true if sucess and false if not.
 bool ExecuteFromFile() - Execute a script from a file, return true if sucess and false if not.
 bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
 bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
@@ -32,6 +33,8 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 
 ### Changelog
 ```
+- v1.0.3.2
++ DownloadDll now has option to download SirHurtInjector, DownloadDll(true) = Download SirHurtInjector + SirHurt,DownloadDll(false) = Download SirHurt only.
 - v1.0.3.1
 + Fixed SSL/TLS issue on Windows 7 [Not tested XD]
 + Auto create Workspace folder when inject :P
