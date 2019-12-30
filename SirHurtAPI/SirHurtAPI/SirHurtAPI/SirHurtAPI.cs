@@ -15,7 +15,7 @@ namespace SirHurtAPI
         private static bool Injected = false;
         private static bool autoInject = false;
         private static bool firstLaunch = true;
-        private readonly static string ver = "1.0.3.1"; //Later because im lazy
+        private readonly static string ver = "1.0.3.2"; //Later because im lazy
         private readonly static string DllName = "[SirHurtAPI]";
         private static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
         {
@@ -28,10 +28,10 @@ namespace SirHurtAPI
         [DllImport("user32.dll", SetLastError = true)]
         static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
         private static uint _injectionResult;
-        public static bool DownloadDll() // Why? because i will use this in my UI, TsuSploit.
+        public static bool DownloadDll(bool DownloadSirHurtInjector) // Why? because i will use this in my UI, TsuSploit.
         {
             bool returnval;
-            if (!File.Exists("SirHurtInjector.dll"))
+            if ((!File.Exists("SirHurtInjector.dll") || new FileInfo("SirHurtInjector.dll").Length == 0) && DownloadSirHurtInjector)
             {
                 try
                 {
@@ -112,7 +112,7 @@ namespace SirHurtAPI
                 int num = 0;
                 try
                 {
-                    returnval = DownloadDll();
+                    returnval = DownloadDll(true);
                     num = Inject();
                     returnval = true;
                 }
