@@ -10,9 +10,9 @@
 - All available function:
 ```
 bool LaunchExploit() - Download & Inject SirHurt V4, return true if sucess and false if not.
-bool Execute(string script) - Execute a script, return true if sucess and false if not.
+bool Execute(string script, bool Forced) - Execute a script, return true if sucess and false if not (if Forced then execute even detect SirHurt is not injected).
 bool DownloadDLL(bool DownloadSirHurtInjector) - Download SirHurt V4 dll (and SirHurtInjector if not exist + boolean is true), return true if sucess and false if not.
-bool ExecuteFromFile() - Execute a script from a file, return true if sucess and false if not.
+bool ExecuteFromFile(bool Forced) - Execute a script from a file, return true if sucess and false if not (if Forced then execute even detect SirHurt is not injected).
 bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
 bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
 bool isInjected() - Get injected status and return true = injected, false = not injected.
@@ -28,11 +28,14 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 ### Features
 - Easier to make SirHurt V4 custom ui.
 - Gay code but works
+- super cringe api, dosent use timer.
 - DA WARUDOOOOOOOOOO
 - No axon (go check it its open source and theres no pipe lol)
 
 ### Changelog
 ```
+- v1.0.3.3
++ Execute and Execute now have bool Forced, check all available function for more info.
 - v1.0.3.2
 + DownloadDll now has option to download SirHurtInjector, DownloadDll(true) = Download SirHurtInjector + SirHurt,DownloadDll(false) = Download SirHurt only.
 - v1.0.3.1
