@@ -194,7 +194,7 @@ namespace SirHurtAPI
                 GetWindowThreadProcessId(intPtr, out num);
                 if ((intPtr == IntPtr.Zero && Injected) || (_injectionResult != 0U && num != _injectionResult))
                 {
-                    Execute("");
+                    Execute("", true);
                     Injected = false;
                     if (GetAutoInject())
                     {
@@ -203,14 +203,21 @@ namespace SirHurtAPI
                 }
             }
         }
-
-        public static bool Execute(string script)
+        private static async void revert()
         {
-            if (Injected)
+            await Task.Delay(100);
+            Execute("", true);
+        }
+
+        public static bool Execute(string script, bool Forced)
+        {
+            if (Injected || Forced)
             {
                 try
                 {
                     File.WriteAllText("sirhurt.dat", script);
+                    if (Forced)
+                        revert();
                     Console.WriteLine(DllName + "Sucessfully write to sirhurt.dat");
                     return true;
                 }
@@ -225,7 +232,7 @@ namespace SirHurtAPI
                 return true;
             }
         }
-        public static bool ExecuteFromFile() //@am ikea#1337 as you wish :|
+        public static bool ExecuteFromFile(bool Forced) //@am ikea#1337 as you wish :|
         {
             var FileDg = new OpenFileDialog();
             FileDg.Filter = "txt (*.txt)|*.txt|lua (*.lua)|*.lua|All files (*.*)|*.*";
@@ -247,7 +254,7 @@ namespace SirHurtAPI
                     Console.WriteLine(DllName+"Failed to read file.\nLog:", ex);
                     return false;
                 }
-                if (Execute(file))
+                if (Execute(file, Forced))
                     return true;
                 else
                     return false;

@@ -24,7 +24,7 @@ namespace SirHurtAPI_Demo_App
 
         private void Execute_Click(object sender, EventArgs e)
         {
-            SirHurtAPI.SirHurtAPI.Execute(scriptBox.Text);
+            SirHurtAPI.SirHurtAPI.Execute(scriptBox.Text, true);
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace SirHurtAPI_Demo_App
 
         private void EFF_Click(object sender, EventArgs e)
         {
-            SirHurtAPI.SirHurtAPI.ExecuteFromFile();
+            SirHurtAPI.SirHurtAPI.ExecuteFromFile(true);
         }
 
         private void oof123_Click(object sender, EventArgs e)
