@@ -15,7 +15,7 @@ namespace SirHurtAPI
         private static bool Injected = false;
         private static bool autoInject = false;
         private static bool firstLaunch = true;
-        private readonly static string ver = "1.0.3.2"; //Later because im lazy
+        private readonly static string ver = "1.0.3.4"; //Later because im lazy
         private readonly static string DllName = "[SirHurtAPI]";
         private static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
         {
