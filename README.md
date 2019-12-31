@@ -21,6 +21,7 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 - When enabled auto inject then quit RBX while injecting then the app will lag :/
 
 ### Old bugs (fixed now)
+- Execute(string script, true) will cause loop with revert forever that cause user might couldn't execute script. (Sorry for not notice fast bc i forgot my GitHub password XD)
 - Won't auto-update sirhurt dll
 - SSl/TLS issue on windows 7
 - some script write/read file error due to no workspace folder
@@ -34,6 +35,8 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 
 ### Changelog
 ```
+- v1.0.3.4
++ Fix Execute(string script, true) will cause loop with revert forever that cause user might couldn't execute script.
 - v1.0.3.3
 + Execute and Execute now have bool Forced, check all available function for more info.
 - v1.0.3.2
