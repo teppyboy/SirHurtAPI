@@ -2,3 +2,4 @@ C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHur
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\SirHurtAPI.pdb
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.dll
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.pdb
+C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csprojAssemblyReference.cache

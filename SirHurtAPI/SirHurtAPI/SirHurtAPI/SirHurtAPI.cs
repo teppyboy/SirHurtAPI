@@ -216,8 +216,11 @@ namespace SirHurtAPI
                 try
                 {
                     File.WriteAllText("sirhurt.dat", script);
-                    if (Forced)
+                    if (Forced && script != "")
+                    {
+                        Console.WriteLine(DllName + "Forced detected, will clear sirhurt.dat in 0.1s");
                         revert();
+                    }
                     Console.WriteLine(DllName + "Sucessfully write to sirhurt.dat");
                     return true;
                 }
