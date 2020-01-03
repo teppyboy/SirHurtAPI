@@ -1,6 +1,7 @@
 # SirHurtAPI
  - An API that support SirHurt V4 for developers easier to make SirHurt V4 custom UI
  - **THIS DOSEN'T GIVE YOU ABILITY TO USE SIRHURT FOR FREE**
+ - **You may have noticed that 0x59 is going to release his lib to create Custom UI for SirHurt V4 easier, so yea MAYBE i'll abandon this project because it sucks, btw if you want updates then create a issue about u want updates, i'll make a update if possible, thanks**
  - Looking for API? [Here](https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll)
  - Looking for Demo App? [Here](https://github.com/teppyboy/SirHurtAPI/raw/master/SirHurtAPI/SirHurtAPI/SirHurtAPI%20Demo%20App/bin/Debug/SirHurtAPI%20Demo%20App.exe)
 ## How to use this API
