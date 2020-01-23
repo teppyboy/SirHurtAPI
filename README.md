@@ -10,13 +10,21 @@
 - References -> Select SirHurtAPI -> Remove (or press DEL) -> References -> Add Reference -> Browse -> Choose this DLL -> Done!
 - All available function:
 ```
-bool LaunchExploit() - Download & Inject SirHurt V4, return true if sucess and false if not.
-bool Execute(string script, bool Forced) - Execute a script, return true if sucess and false if not (if Forced then execute even detect SirHurt is not injected).
-bool DownloadDLL(bool DownloadSirHurtInjector) - Download SirHurt V4 dll (and SirHurtInjector if not exist + boolean is true), return true if sucess and false if not.
-bool ExecuteFromFile(bool Forced) - Execute a script from a file, return true if sucess and false if not (if Forced then execute even detect SirHurt is not injected).
-bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
-bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
-bool isInjected() - Get injected status and return true = injected, false = not injected.
+class SirHurtAPI:
++ bool LaunchExploit() - Download & Inject SirHurt V4, return true if sucess and false if not.
++ bool Execute(string script, bool Forced) - Execute a script, return true if sucess and false if not (if Forced then execute even detect SirHurt is not injected).
+- Execute will throw an exception if you execute a script while its clearing sirhurt.dat. Exception text: [SirHurtAPI]Cleaning sirhurt.dat
++ bool DownloadDLL(bool DownloadSirHurtInjector) - Download SirHurt V4 dll (and SirHurtInjector if not exist + boolean is true), return true if sucess and false if not.
++ bool ExecuteFromFile(bool Forced) - Execute a script from a file, return true if sucess and false if not (if Forced then execute even detect SirHurt is not injected).
++ bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
++ bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
++ bool isInjected() - Get injected status and return true = injected, false = not injected.
++ bool isNewVersionAvailable() - Check for new version of SirHurtAPI, if yes then return true, else return false
++ bool setInjectStatus(bool InjectStatus) - Set Inject status to true/false [For custom Inject method only!] [Don't use if you don't know anything or it'll break the inject status]
+class Experimental:
++ bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
++ bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
++ bool LaunchExploit() - Download & Inject SirHurt V4 [And FASM + FASMX64 if not exist], return true if sucess and false if not.
 ```
 ### Bugs (so don't judge me by not telling bugs)
 - When enabled auto inject then quit RBX while injecting then the app will lag :/
@@ -36,6 +44,18 @@ bool isInjected() - Get injected status and return true = injected, false = not 
 
 ### Changelog
 ```
+- v1.0.4.0
++ Added isNewVersionAvailable()
++ Added Class Experimental:
+= 
++ bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
++ bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
++ bool LaunchExploit() - Download & Inject SirHurt V4 [And FASM + FASMX64 if not exist], return true if sucess and false if not.
+=
++ Added setInjectStatus(bool InjectStatus)
++ Execute will throw an exception if you execute a script while its clearing sirhurt.dat. Exception text: [SirHurtAPI]Cleaning sirhurt.dat
++ Improved GetAutoInject(),AutoInjectToggle(),isInjected(),LaunchExploit()
++ vouch for i love shipgirl
 - v1.0.3.4
 + Fix Execute(string script, true) will cause loop with revert forever that cause user might couldn't execute script.
 - v1.0.3.3
