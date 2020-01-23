@@ -58,7 +58,7 @@ namespace SirHurtAPI_Demo_App
                 // Update check
                 bool updateCheck()
                 {
-                    return false;
+                    return SirHurtAPI.SirHurtAPI.isNewVersionAvailable();
                 }
 
                 if (updateCheck()) {

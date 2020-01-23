@@ -15,11 +15,12 @@ namespace SirHurtAPI
     {
         private static bool Injected = false;
         private static bool autoInject = false;
-        internal static bool firstLaunch = true;
         private static bool isCleaning = false;
+        private static bool isCheckingDetachDone = false;
+        private static bool firstLaunch = true;
         private readonly static string ver = "1.0.4.0"; //Later because im lazy
         private readonly static string DllName = "[SirHurtAPI]";
-        private static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
+        internal static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
         {
             return true;
         }
@@ -185,11 +186,8 @@ namespace SirHurtAPI
                 GetWindowThreadProcessId(intPtr, out _injectionResult);
                 setInjectStatus(true);
                 returnval = true;
-                if (firstLaunch)
-                {
-                    injectionCheckerThreadHandler();
-                    firstLaunch = false;
-                }
+                isCheckingDetachDone = false;
+                injectionCheckerThreadHandler();
             }
             else
                 return false;
@@ -248,6 +246,11 @@ namespace SirHurtAPI
             {
                 var a = Registry.CurrentUser.OpenSubKey("SirHurtAPI");
                 Injected = Convert.ToBoolean(a.GetValue("InjectedValue"));
+                if (firstLaunch && Injected && !isCheckingDetachDone)
+                {
+                    firstLaunch = false;
+                    injectionCheckerThreadHandler();
+                }
             }
             catch (Exception ex)
             {
@@ -291,12 +294,12 @@ namespace SirHurtAPI
             }
         }
 
-        internal static async Task injectionCheckerThreadHandler()
+        private static async Task injectionCheckerThreadHandler()
         {
-            for (; ;)
+            while (!isCheckingDetachDone)
             {
                 Application.DoEvents();
-                Thread.Sleep(100);
+                Task.Delay(100);
                 IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
                 uint num = 0U;
                 GetWindowThreadProcessId(intPtr, out num);
@@ -308,6 +311,7 @@ namespace SirHurtAPI
                     {
                         autoIJ();
                     }
+                    isCheckingDetachDone = true;
                 }
             }
         }

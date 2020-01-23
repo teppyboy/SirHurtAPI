@@ -5,6 +5,9 @@ using Reloaded.Injector;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
+using System.Net;
+using System.Net.Security;
 
 namespace SirHurtAPI
 {
@@ -12,7 +15,7 @@ namespace SirHurtAPI
     {
         private readonly static string DllName = "[SirHurtAPI]";
         private static bool autoInject;
-        private static bool firstLaunch = true;
+        private static bool isCheckingDetachDone = false;
         public static bool GetAutoInject()
         {
             try
@@ -43,6 +46,79 @@ namespace SirHurtAPI
                 Console.WriteLine(ex);
                 return false;
             }
+        }
+        private static bool dlFASM()
+        {
+            bool returnval;
+            if ((!File.Exists("FASM.dll") || new FileInfo("FASM.dll").Length == 0))
+            {
+                try
+                {
+                    using (WebClient webClient = new WebClient())
+                    {
+                        ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(SirHurtAPI.AlwaysGoodCertificate);
+                        ServicePointManager.Expect100Continue = true;
+                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                        webClient.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/FASM.DLL", "FASM.dll");
+                        Console.WriteLine(DllName + "Downloaded FASM.dll");
+                    } // Code from SirHurt Bootstrapper.
+                    if (File.Exists("FASM.dll") && new FileInfo("FASM.dll").Length != 0)
+                        returnval = true;
+                    else
+                        return false;
+                }
+                catch (Exception ex)
+                {
+                    string reason;
+                    if (ex.ToString().Contains("Timed out"))
+                    {
+                        reason = "Connection timed out.";
+                    }
+                    else
+                    {
+                        reason = "Unknown, please give log and create a issue in SirHurtAPI Github.";
+                    }
+                    Console.WriteLine(DllName + "Couldn't download FSAM.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
+                    return false;
+                }
+            }
+            else
+                returnval = true;
+            if ((!File.Exists("FASMX64.dll") || new FileInfo("FASMX64.dll").Length == 0))
+            {
+                try
+                {
+                    using (WebClient webClient = new WebClient())
+                    {
+                        ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(SirHurtAPI.AlwaysGoodCertificate);
+                        ServicePointManager.Expect100Continue = true;
+                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                        webClient.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/FASMX64.DLL", "FASMX64.dll");
+                        Console.WriteLine(DllName + "Downloaded FASMX64.dll");
+                    } // Code from SirHurt Bootstrapper.
+                    if (File.Exists("FASMX64.dll") && new FileInfo("FASMX64.dll").Length != 0)
+                        returnval = true;
+                    else
+                        return false;
+                }
+                catch (Exception ex)
+                {
+                    string reason;
+                    if (ex.ToString().Contains("Timed out"))
+                    {
+                        reason = "Connection timed out.";
+                    }
+                    else
+                    {
+                        reason = "Unknown, please give log and create a issue in SirHurtAPI Github.";
+                    }
+                    Console.WriteLine(DllName + "Couldn't download FASMX64.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
+                    return false;
+                }
+            }
+            else
+                returnval = true;
+            return returnval;
         }
         public static bool AutoInjectToggle() //Why does everyone asking for this shit function ._.
         {
@@ -91,13 +167,15 @@ namespace SirHurtAPI
                 long num = 0;
                 try
                 {
-                    if (SirHurtAPI.DownloadDll(false))
-                    {
+                    if (SirHurtAPI.DownloadDll(false) && dlFASM())
+                    { 
                         returnval = true;
+                        Thread.Sleep(250);
                         foreach (Process rbx in Process.GetProcessesByName("RobloxPlayerBeta"))
                         {
                             var a = new Injector(rbx);
-                            num = a.Inject("SirHurt.dll");
+                            num = a.Inject(AppDomain.CurrentDomain.BaseDirectory + "SirHurt.dll");
+                            Thread.Sleep(100);
                         }
                     }
                     else
@@ -124,11 +202,8 @@ namespace SirHurtAPI
                 SirHurtAPI.GetWindowThreadProcessId(intPtr, out SirHurtAPI._injectionResult);
                 SirHurtAPI.setInjectStatus(true);
                 returnval = true;
-                if (firstLaunch)
-                {
-                    injectionCheckerThreadHandler();
-                    firstLaunch = false;
-                }
+                isCheckingDetachDone = false;
+                injectionCheckerThreadHandler();
             }
             else
                 return false;
@@ -137,10 +212,10 @@ namespace SirHurtAPI
 
         internal static async Task injectionCheckerThreadHandler()
         {
-            for (; ; )
+            while (!isCheckingDetachDone)
             {
                 Application.DoEvents();
-                Thread.Sleep(100);
+                Task.Delay(100);
                 IntPtr intPtr = SirHurtAPI.FindWindowA("WINDOWSCLIENT", "Roblox");
                 uint num = 0U;
                 SirHurtAPI.GetWindowThreadProcessId(intPtr, out num);
@@ -152,6 +227,7 @@ namespace SirHurtAPI
                     {
                         autoIJ();
                     }
+                    isCheckingDetachDone = true;
                 }
             }
         }
