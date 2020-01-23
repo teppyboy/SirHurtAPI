@@ -56,18 +56,32 @@ namespace SirHurtAPI_Demo_App
             } else
             {
                 // Update check
-                bool updateCheck()
+                if (SirHurtAPI.SirHurtAPI.isNewVersionAvailable()) 
                 {
-                    return SirHurtAPI.SirHurtAPI.isNewVersionAvailable();
-                }
-
-                if (updateCheck()) {
                     File.Delete("SirHurtAPI.dll");
-                    File.Move("SirHurtAPI.temp", "SirHurtAPI.dll");
                     Console.WriteLine("Updating SirHurt API");
-                } else
-                {
-                    File.Delete("SirHurtAPI.temp");
+                    var wc = new WebClient();
+                    try
+                    {
+                        wc.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll", "SirHurtAPI.dll");
+                        wc.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        string reason;
+                        if (ex.ToString().Contains("Timed out"))
+                        {
+                            reason = "Connection timed out.";
+                        }
+                        else
+                        {
+                            reason = "Unknown, please give log and create a issue in SirHurtAPI Github.";
+                        }
+                        MessageBox.Show("Couldn't download SirHurtAPI.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
+                        Environment.Exit(0);
+                    }
+                    Console.WriteLine("Downloaded.");
+                    Console.WriteLine("======================================");
                 }
                 Console.WriteLine("Please keep this console open, if close then the UI will be closed too.");
                 Application.Run(new MainForm());
