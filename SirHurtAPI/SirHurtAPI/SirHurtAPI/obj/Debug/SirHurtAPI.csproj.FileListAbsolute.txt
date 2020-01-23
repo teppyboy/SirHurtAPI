@@ -3,3 +3,29 @@ C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHur
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.dll
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.pdb
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csprojAssemblyReference.cache
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\FASM-LICENSE.TXT
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\FASM.DLL
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\FASMX64.DLL
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Reloaded.Assembler.targets
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\SirHurtAPI.dll.config
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\SirHurtAPI.dll
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\SirHurtAPI.pdb
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Reloaded.Assembler.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Reloaded.Injector.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Reloaded.Memory.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Reloaded.Memory.Buffers.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\System.Buffers.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\System.Memory.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\System.Numerics.Vectors.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\System.Security.Cryptography.Pkcs.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Validation.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\xunit.abstractions.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\xunit.core.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\xunit.execution.desktop.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Xunit.SkippableFact.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csprojAssemblyReference.cache
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csproj.Fody.CopyLocal.cache
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csproj.CopyComplete
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.dll
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.pdb

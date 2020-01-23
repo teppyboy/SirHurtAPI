@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace SirHurtAPI
 {
@@ -14,8 +15,9 @@ namespace SirHurtAPI
     {
         private static bool Injected = false;
         private static bool autoInject = false;
-        private static bool firstLaunch = true;
-        private readonly static string ver = "1.0.3.4"; //Later because im lazy
+        internal static bool firstLaunch = true;
+        private static bool isCleaning = false;
+        private readonly static string ver = "1.0.4.0"; //Later because im lazy
         private readonly static string DllName = "[SirHurtAPI]";
         private static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
         {
@@ -26,8 +28,43 @@ namespace SirHurtAPI
         [DllImport("user32.dll", SetLastError = true)]
         internal static extern IntPtr FindWindowA(string lpClassName, string lpWindowName);
         [DllImport("user32.dll", SetLastError = true)]
-        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
-        private static uint _injectionResult;
+        internal static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+        internal static uint _injectionResult;
+        public static bool isNewVersionAvailable()
+        {
+            try
+            {
+                using (WebClient wc = new WebClient())
+                {
+                    ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
+                    ServicePointManager.Expect100Continue = true;
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                    var latestver = wc.DownloadString("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/version.txt");
+                    wc.Dispose();
+                    if (latestver == "")
+                    {
+                        Console.WriteLine(DllName + "Unable to check for new version...");
+                        return false;
+                    }
+                    else if (latestver != ver)
+                    {
+                        Console.WriteLine(DllName + "New version found.");
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine(DllName + "No new version found.");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(DllName + "Unable to check for new version...");
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
         public static bool DownloadDll(bool DownloadSirHurtInjector) // Why? because i will use this in my UI, TsuSploit.
         {
             bool returnval;
@@ -43,7 +80,10 @@ namespace SirHurtAPI
                         webClient.DownloadFile("https://asshurthosting.pw/asshurt/update/v4/SirHurtInjector.dll", "SirHurtInjector.dll");
                         Console.WriteLine(DllName + "Downloaded SirHurtInjector.dll");
                     } // Code from SirHurt Bootstrapper.
-                    returnval = true;
+                    if (File.Exists("SirHurtInjector.dll") && new FileInfo("SirHurtInjector.dll").Length != 0)
+                        returnval = true;
+                    else
+                        return false;
                 }
                 catch (Exception ex)
                 {
@@ -57,7 +97,7 @@ namespace SirHurtAPI
                         reason = "Unknown, please give log and create a issue in SirHurtAPI Github.";
                     }
                     Console.WriteLine(DllName + "Couldn't download SirHurtInjector.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
-                    returnval = false;
+                    return false;
                 }
             }
             else
@@ -80,7 +120,10 @@ namespace SirHurtAPI
                     webClient.DownloadFile("https://asshurthosting.pw/asshurt/update/v4/SirHurt.dll", "SirHurt.dll");
                     Console.WriteLine(DllName + "Downloaded SirHurt.dll");
                 } // Code from SirHurt Bootstrapper.
-                returnval = true;
+                if (File.Exists("SirHurt.dll") && new FileInfo("SirHurt.dll").Length != 0)
+                    returnval = true;
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -94,42 +137,53 @@ namespace SirHurtAPI
                     reason = "Unknown, please give log.";
                 }
                 Console.WriteLine(DllName + "Couldn't download SirHurt.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
-                returnval = false;
+                return false;
             }
             return returnval;
         }
+
         public static bool LaunchExploit() //Why LaunchExploit? because some ppl are used to make exploit using weareretarded api so yea.
         {
             bool returnval;
-            if (!Injected)
+            if (!isInjected())
             {
-                Directory.CreateDirectory("Workspace");
                 IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
                 if (intPtr == IntPtr.Zero)
                 {
+                    setInjectStatus(false);
                     return false;
                 }
                 int num = 0;
                 try
                 {
-                    returnval = DownloadDll(true);
-                    num = Inject();
-                    returnval = true;
+                    if (DownloadDll(true))
+                    {
+                        num = Inject();
+                        returnval = true;
+                    }
+                    else
+                        return false;
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(DllName+"An error occured with injecting SirHurt: "+ ex.Message);
-                    Injected = false;
+                    setInjectStatus(false);
                     return false;
                 }
                 if (num != 0)
                 {
                     Console.WriteLine(DllName + "Sucessfully injected SirHurt V4.");
-                    Injected = true;
+                    setInjectStatus(true);
                     returnval = true;
                 }
+                else
+                {
+                    Console.WriteLine(DllName + "Failed to inject SirHurt V4");
+                    setInjectStatus(false);
+                    return false;
+                }
                 GetWindowThreadProcessId(intPtr, out _injectionResult);
-                Injected = true;
+                setInjectStatus(true);
                 returnval = true;
                 if (firstLaunch)
                 {
@@ -138,28 +192,82 @@ namespace SirHurtAPI
                 }
             }
             else
-                return true;
+                return false;
             return returnval;
         }
         public static bool GetAutoInject()
         {
+            try
+            {
+                var a = Registry.CurrentUser.OpenSubKey("SirHurtAPI");
+                autoInject = Convert.ToBoolean(a.GetValue("AutoIJ"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(DllName + "Cannot read auto inject status from registry, setting to false");
+                setAutoIJStatus(false);
+                Console.WriteLine(ex);
+            }
             return autoInject;
+        }
+        public static bool setInjectStatus(bool InjectStatus)
+        {
+            try
+            {
+                var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
+                a.SetValue("InjectedValue", InjectStatus);
+                Injected = InjectStatus;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(DllName + "Cannot write inject status to registry");
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+        private static bool setAutoIJStatus(bool AutoInjectStatus)
+        {
+            try
+            {
+                var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
+                a.SetValue("AutoIJ", AutoInjectStatus);
+                autoInject = AutoInjectStatus;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(DllName + "Cannot write auto inject status to registry");
+                Console.WriteLine(ex);
+                return false;
+            }
         }
         public static bool isInjected()
         {
+            try
+            {
+                var a = Registry.CurrentUser.OpenSubKey("SirHurtAPI");
+                Injected = Convert.ToBoolean(a.GetValue("InjectedValue"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(DllName + "Cannot read inject status from registry, setting to false");
+                setInjectStatus(false);
+                Console.WriteLine(ex);
+            }
             return Injected;
         }
         public static bool AutoInjectToggle() //Why does everyone asking for this shit function ._.
         {
             if (!GetAutoInject())
             {
-                autoInject = true;
+                setAutoIJStatus(true);
                 autoIJ();
                 Console.WriteLine(DllName + "Enabled auto-inject");
             }
             else
             {
-                autoInject = false;
+                setAutoIJStatus(false);
                 Console.WriteLine(DllName + "Disabled auto-inject");
             }
             return GetAutoInject();
@@ -171,7 +279,7 @@ namespace SirHurtAPI
             {
                 await Task.Delay(100);
                 IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
-                if (Injected || intPtr == IntPtr.Zero)
+                if (isInjected() || intPtr == IntPtr.Zero)
                 {
                     Console.WriteLine(DllName + "Injected or ROBLOX isn't running...");
                 }
@@ -183,7 +291,7 @@ namespace SirHurtAPI
             }
         }
 
-        private static async Task injectionCheckerThreadHandler()
+        internal static async Task injectionCheckerThreadHandler()
         {
             for (; ;)
             {
@@ -192,10 +300,10 @@ namespace SirHurtAPI
                 IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
                 uint num = 0U;
                 GetWindowThreadProcessId(intPtr, out num);
-                if ((intPtr == IntPtr.Zero && Injected) || (_injectionResult != 0U && num != _injectionResult))
+                if ((intPtr == IntPtr.Zero && isInjected()) || (_injectionResult != 0U && num != _injectionResult))
                 {
                     Execute("", true);
-                    Injected = false;
+                    setInjectStatus(false);
                     if (GetAutoInject())
                     {
                         autoIJ();
@@ -205,14 +313,17 @@ namespace SirHurtAPI
         }
         private static async void revert()
         {
+            isCleaning = true;
             await Task.Delay(100);
             Execute("", true);
+            isCleaning = false;
         }
 
         public static bool Execute(string script, bool Forced)
         {
-            if (Injected || Forced)
+            if ((isInjected() || Forced) && !isCleaning)
             {
+                Directory.CreateDirectory("Workspace");
                 try
                 {
                     File.WriteAllText("sirhurt.dat", script);
@@ -232,7 +343,12 @@ namespace SirHurtAPI
             }
             else
             {
-                return true;
+                if (isCleaning)
+                {
+                    return false;
+                    throw new Exception(DllName + "Cleaning sirhurt.dat");
+                }
+                return false;
             }
         }
         public static bool ExecuteFromFile(bool Forced) //@am ikea#1337 as you wish :|

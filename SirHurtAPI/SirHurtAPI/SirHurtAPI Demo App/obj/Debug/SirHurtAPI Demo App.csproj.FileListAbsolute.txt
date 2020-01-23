@@ -10,3 +10,20 @@ C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHur
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csproj.CopyComplete
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.exe
 C:\Users\tretrauit\Documents\Generic Exploit Loader\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.pdb
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\FASM-LICENSE.TXT
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\FASM.DLL
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\FASMX64.DLL
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\Reloaded.Assembler.targets
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI Demo App.exe.config
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI Demo App.exe
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI Demo App.pdb
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI.dll
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI.pdb
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI.dll.config
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csprojAssemblyReference.cache
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI_Demo_App.MainForm.resources
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI_Demo_App.Properties.Resources.resources
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csproj.GenerateResource.cache
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csproj.CopyComplete
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.exe
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.pdb

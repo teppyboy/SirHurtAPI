@@ -52,5 +52,16 @@ namespace SirHurtAPI_Demo_App
         {
             injectedstring.Text = "Injected: " + SirHurtAPI.SirHurtAPI.isInjected().ToString();
         }
+
+        private void AutoIJEx_Click(object sender, EventArgs e)
+        {
+            SirHurtAPI.Experimental.AutoInjectToggle();
+            AutoIJEx.Text = "Auto Inject [Experimental]: " + SirHurtAPI.Experimental.GetAutoInject().ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SirHurtAPI.Experimental.LaunchExploit();
+        }
     }
 }
