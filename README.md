@@ -24,7 +24,7 @@ class SirHurtAPI:
 class Experimental:
 + bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
 + bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
-+ bool LaunchExploit() - Download & Inject SirHurt V4 [And FASM + FASMX64 if not exist], return true if sucess and false if not.
++ bool LaunchExploit() - Download & Inject SirHurt V4 using Reloaded.Injector[And FASM + FASMX64 if not exist], return true if sucess and false if not.
 ```
 ### Bugs (so don't judge me by not telling bugs)
 - When enabled auto inject then quit RBX while injecting then the app will lag :/
