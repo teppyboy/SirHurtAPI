@@ -176,7 +176,7 @@ namespace SirHurtAPI
                     Console.WriteLine(DllName + "Sucessfully injected SirHurt V4.");
                     setInjectStatus(true);
                     var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
-                    SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                    SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "sirhurt.dat";
                     a.SetValue("SHDatPath", SHdatPath);
                     returnval = true;
                     GetWindowThreadProcessId(intPtr, out _injectionResult);
@@ -338,7 +338,7 @@ namespace SirHurtAPI
                     {
                         Console.WriteLine(DllName + "Failed to fetch sirhurt.dat directory, using default one...");
                         a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
-                        SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                        SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "sirhurt.dat";
                         a.SetValue("SHDatPath", SHdatPath);
                     }
                 }
@@ -346,7 +346,7 @@ namespace SirHurtAPI
                 {
                     Console.WriteLine(DllName + $"Failed to fetch sirhurt.dat directory, using default one...[T/C]\n{ex}");
                     var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
-                    SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                    SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "sirhurt.dat";
                     a.SetValue("SHDatPath", SHdatPath);
                 }
                 try

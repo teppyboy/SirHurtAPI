@@ -193,7 +193,7 @@ namespace SirHurtAPI
                     SirHurtAPI.setInjectStatus(true);
                     returnval = true;
                     var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
-                    SirHurtAPI.SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                    SirHurtAPI.SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "sirhurt.dat";
                     a.SetValue("SHDatPath", SirHurtAPI.SHdatPath);
                     SirHurtAPI.GetWindowThreadProcessId(intPtr, out SirHurtAPI._injectionResult);
                     SirHurtAPI.setInjectStatus(true);
