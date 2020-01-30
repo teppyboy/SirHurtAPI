@@ -75,6 +75,7 @@ namespace SirHurtAPI
                 {
                     using (WebClient webClient = new WebClient())
                     {
+                        Console.WriteLine(DllName + "Begin to download SirHurtInjector.dll");
                         ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
                         ServicePointManager.Expect100Continue = true;
                         ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -105,6 +106,7 @@ namespace SirHurtAPI
                 returnval = true;
             if (File.Exists("sirh.dat"))
             {
+                Console.WriteLine(DllName + "Clearing old SirHurt.dll and sirh.dat");
                 if (File.Exists(File.ReadAllText("sirh.dat")))
                 {
                     File.Delete(File.ReadAllText("sirh.dat"));
@@ -115,6 +117,7 @@ namespace SirHurtAPI
             {
                 using (WebClient webClient = new WebClient())
                 {
+                    Console.WriteLine(DllName + "Begin to download SirHurt.dll");
                     ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
                     ServicePointManager.Expect100Continue = true;
                     ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -331,14 +334,17 @@ namespace SirHurtAPI
             {
                 try
                 {
+                    Console.WriteLine(DllName + "Begin to read registry");
                     var a = Registry.CurrentUser.OpenSubKey("SirHurtAPI");
                     var b = a.GetValue("SHDatPath").ToString();
+                    Console.WriteLine(DllName + "sirhurt.dat path: " + b);
                     SHdatPath = b;
-                    if (b == "")
+                    if (b == "" || !b.Contains("sirhurt.dat"))
                     {
                         Console.WriteLine(DllName + "Failed to fetch sirhurt.dat directory, using default one...");
                         a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
                         SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "sirhurt.dat";
+                        Console.WriteLine(DllName + "Setting sirhurt.dat directory to: " + SHdatPath);
                         a.SetValue("SHDatPath", SHdatPath);
                     }
                 }
@@ -347,11 +353,13 @@ namespace SirHurtAPI
                     Console.WriteLine(DllName + $"Failed to fetch sirhurt.dat directory, using default one...[T/C]\n{ex}");
                     var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
                     SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "sirhurt.dat";
+                    Console.WriteLine(DllName + "Setting sirhurt.dat directory to: " + SHdatPath);
                     a.SetValue("SHDatPath", SHdatPath);
                 }
                 try
                 {
                     Directory.CreateDirectory("Workspace");
+                    Console.WriteLine(DllName + "Begin to write to " + SHdatPath);
                     File.WriteAllText(SHdatPath, script);
                     if (Forced && script != "")
                     {
