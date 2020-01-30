@@ -28,22 +28,26 @@ class Experimental:
 ```
 ### Bugs (so don't judge me by not telling bugs)
 - When enabled auto inject then quit RBX while injecting then the app will lag :/
-
+- If you use isNewVersionAvailable() then u download latest SirHurtAPI.dll to replace this then your app will get error about Access is denied. To fix that you must use an external app to download and replace SirHurtAPI.dll
 ### Old bugs (fixed now)
 - Execute(string script, true) will cause loop with revert forever that cause user might couldn't execute script. (Sorry for not notice fast bc i forgot my GitHub password XD)
 - Won't auto-update sirhurt dll
 - SSl/TLS issue on windows 7
 - some script write/read file error due to no workspace folder
-
+- Execute won't do if u inject SirHurt in dir1 then u execute in dir2
 ### Features
 - Easier to make SirHurt V4 custom ui.
 - Gay code but works
-- super cringe api, dosent use timer.
+- super cringe api, dosent use timer (Dosen't use System.Windows.Forms).
 - DA WARUDOOOOOOOOOO
 - No axon (go check it its open source and theres no pipe lol)
-
+- Enterprise-sama
 ### Changelog
 ```
+- v1.0.4.1
++ Fixed Execute won't do if u inject SirHurt in dir1 then u execute in dir2
++ This now gives more detailed log in console.
++ chino go update ur shit, there's a bug in sirhurtapi.
 - v1.0.4.0
 + Added isNewVersionAvailable()
 + Added Class Experimental:
