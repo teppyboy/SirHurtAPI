@@ -4,7 +4,6 @@ using System.Net;
 using System.Net.Security;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -18,7 +17,8 @@ namespace SirHurtAPI
         private static bool isCleaning = false;
         private static bool isCheckingDetachDone = false;
         private static bool firstLaunch = true;
-        private readonly static string ver = "1.0.4.0"; //Later because im lazy
+        internal static string SHdatPath = "sirhurt.dat";
+        private readonly static string ver = "1.0.4.1"; //Ah shit i have to do this
         private readonly static string DllName = "[SirHurtAPI]";
         internal static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
         {
@@ -175,7 +175,14 @@ namespace SirHurtAPI
                 {
                     Console.WriteLine(DllName + "Sucessfully injected SirHurt V4.");
                     setInjectStatus(true);
+                    var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
+                    SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                    a.SetValue("SHDatPath", SHdatPath);
                     returnval = true;
+                    GetWindowThreadProcessId(intPtr, out _injectionResult);
+                    setInjectStatus(true);
+                    isCheckingDetachDone = false;
+                    injectionCheckerThreadHandler();
                 }
                 else
                 {
@@ -183,11 +190,6 @@ namespace SirHurtAPI
                     setInjectStatus(false);
                     return false;
                 }
-                GetWindowThreadProcessId(intPtr, out _injectionResult);
-                setInjectStatus(true);
-                returnval = true;
-                isCheckingDetachDone = false;
-                injectionCheckerThreadHandler();
             }
             else
                 return false;
@@ -327,10 +329,30 @@ namespace SirHurtAPI
         {
             if ((isInjected() || Forced) && !isCleaning)
             {
-                Directory.CreateDirectory("Workspace");
                 try
                 {
-                    File.WriteAllText("sirhurt.dat", script);
+                    var a = Registry.CurrentUser.OpenSubKey("SirHurtAPI");
+                    var b = a.GetValue("SHDatPath").ToString();
+                    SHdatPath = b;
+                    if (b == "")
+                    {
+                        Console.WriteLine(DllName + "Failed to fetch sirhurt.dat directory, using default one...");
+                        a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
+                        SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                        a.SetValue("SHDatPath", SHdatPath);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(DllName + $"Failed to fetch sirhurt.dat directory, using default one...[T/C]\n{ex}");
+                    var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
+                    SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                    a.SetValue("SHDatPath", SHdatPath);
+                }
+                try
+                {
+                    Directory.CreateDirectory("Workspace");
+                    File.WriteAllText(SHdatPath, script);
                     if (Forced && script != "")
                     {
                         Console.WriteLine(DllName + "Forced detected, will clear sirhurt.dat in 0.1s");

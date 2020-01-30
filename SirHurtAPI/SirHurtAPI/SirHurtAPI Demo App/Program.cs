@@ -28,35 +28,10 @@ namespace SirHurtAPI_Demo_App
             Console.WriteLine("======================================");
             Console.WriteLine("Checking for required DLL...");
 
-            if (!File.Exists("SirHurtAPI.dll"))
-            {
-                Console.WriteLine("SirHurt API Missing, Downloading now...");
-                var wc = new WebClient();
-                try
-                {
-                    wc.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll","SirHurtAPI.dll");
-                    wc.Dispose();
-                }
-                catch (Exception ex)
-                {
-                    string reason;
-                    if (ex.ToString().Contains("Timed out"))
-                    {
-                        reason = "Connection timed out.";
-                    }
-                    else
-                    {
-                        reason = "Unknown, please give log and create a issue in SirHurtAPI Github.";
-                    }
-                    MessageBox.Show("Couldn't download SirHurtAPI.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
-                    Environment.Exit(0);
-                }
-                Console.WriteLine("Downloaded.");
-                Console.WriteLine("======================================");
-            } else
+            if (File.Exists("SirHurtAPI.dll"))
             {
                 // Update check
-                if (SirHurtAPI.SirHurtAPI.isNewVersionAvailable()) 
+                if (SirHurtAPI.SirHurtAPI.isNewVersionAvailable())
                 {
                     File.Delete("SirHurtAPI.dll");
                     Console.WriteLine("Updating SirHurt API");
@@ -85,6 +60,34 @@ namespace SirHurtAPI_Demo_App
                 }
                 Console.WriteLine("Please keep this console open, if close then the UI will be closed too.");
                 Application.Run(new MainForm());
+            }
+            else
+            {
+                Console.WriteLine("SirHurt API Missing, Downloading now...");
+                var wc = new WebClient();
+                try
+                {
+                    wc.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll", "SirHurtAPI.dll");
+                    wc.Dispose();
+                    Console.WriteLine("Downloaded.");
+                    Console.WriteLine("======================================");
+                    Console.WriteLine("Please keep this console open, if close then the UI will be closed too.");
+                    Application.Run(new MainForm());
+                }
+                catch (Exception ex)
+                {
+                    string reason;
+                    if (ex.ToString().Contains("Timed out"))
+                    {
+                        reason = "Connection timed out.";
+                    }
+                    else
+                    {
+                        reason = "Unknown, please give log and create a issue in SirHurtAPI Github.";
+                    }
+                    MessageBox.Show("Couldn't download SirHurtAPI.dll, " + "Reason: " + reason + "\nLog:\n" + ex.ToString());
+                    Environment.Exit(0);
+                }
             }
         }
     }

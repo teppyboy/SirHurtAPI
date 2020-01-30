@@ -192,6 +192,13 @@ namespace SirHurtAPI
                     Console.WriteLine(DllName + "Sucessfully injected SirHurt V4.");
                     SirHurtAPI.setInjectStatus(true);
                     returnval = true;
+                    var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
+                    SirHurtAPI.SHdatPath = AppDomain.CurrentDomain.BaseDirectory + "";
+                    a.SetValue("SHDatPath", SirHurtAPI.SHdatPath);
+                    SirHurtAPI.GetWindowThreadProcessId(intPtr, out SirHurtAPI._injectionResult);
+                    SirHurtAPI.setInjectStatus(true);
+                    isCheckingDetachDone = false;
+                    injectionCheckerThreadHandler();
                 }
                 else
                 {
@@ -199,11 +206,6 @@ namespace SirHurtAPI
                     SirHurtAPI.setInjectStatus(false);
                     return false;
                 }
-                SirHurtAPI.GetWindowThreadProcessId(intPtr, out SirHurtAPI._injectionResult);
-                SirHurtAPI.setInjectStatus(true);
-                returnval = true;
-                isCheckingDetachDone = false;
-                injectionCheckerThreadHandler();
             }
             else
                 return false;
