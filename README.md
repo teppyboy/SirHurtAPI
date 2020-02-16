@@ -63,7 +63,7 @@ class Scripts:
 ### Changelog
 ```
 - v1.0.5.0
-- YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
++ YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
 * Added class Scripts:
 + bool OwlHub() - Execute Owl Hub and return true if sucess and false if failed
 + bool FluxBreak() - Execute FluxBreak and return true if sucess and false if failed
