@@ -1,13 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security.Cryptography;
+using System.Threading;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SirHurtAPI_Demo_App
 {
@@ -33,11 +31,15 @@ namespace SirHurtAPI_Demo_App
                 // Update check
                 if (SirHurtAPI.SirHurtAPI.isNewVersionAvailable())
                 {
-                    File.Delete("SirHurtAPI.dll");
-                    Console.WriteLine("Updating SirHurt API");
+                    Thread.Sleep(500); // Disconnect the dll before download
                     var wc = new WebClient();
                     try
                     {
+                        File.Delete("SirHurtAPI.dll");
+                        Console.WriteLine("Updating SirHurt API");
+                        ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
+                        ServicePointManager.Expect100Continue = true;
+                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                         wc.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll", "SirHurtAPI.dll");
                         wc.Dispose();
                     }
@@ -67,6 +69,9 @@ namespace SirHurtAPI_Demo_App
                 var wc = new WebClient();
                 try
                 {
+                    ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
+                    ServicePointManager.Expect100Continue = true;
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                     wc.DownloadFile("https://raw.githubusercontent.com/teppyboy/SirHurtAPI/master/SirHurtAPI/SirHurtAPI/SirHurtAPI/bin/Debug/SirHurtAPI.dll", "SirHurtAPI.dll");
                     wc.Dispose();
                     Console.WriteLine("Downloaded.");
@@ -89,6 +94,10 @@ namespace SirHurtAPI_Demo_App
                     Environment.Exit(0);
                 }
             }
+        }
+        internal static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
+        {
+            return true;
         }
     }
 }

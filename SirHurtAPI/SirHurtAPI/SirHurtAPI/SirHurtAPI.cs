@@ -18,7 +18,7 @@ namespace SirHurtAPI
         private static bool isCheckingDetachDone = false;
         private static bool firstLaunch = true;
         internal static string SHdatPath = "sirhurt.dat";
-        private readonly static string ver = "1.0.4.1"; //Ah shit i have to do this
+        private readonly static string ver = "1.0.5.0"; //Ah shit i have to do this
         private readonly static string DllName = "[SirHurtAPI]";
         internal static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
         {

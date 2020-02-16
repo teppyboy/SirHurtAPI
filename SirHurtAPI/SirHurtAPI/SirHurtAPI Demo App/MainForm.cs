@@ -63,5 +63,10 @@ namespace SirHurtAPI_Demo_App
         {
             SirHurtAPI.Experimental.LaunchExploit();
         }
+
+        private void openscripthub_Click(object sender, EventArgs e)
+        {
+            SirHurtAPI.Scripts.OpenScriptHub();
+        }
     }
 }

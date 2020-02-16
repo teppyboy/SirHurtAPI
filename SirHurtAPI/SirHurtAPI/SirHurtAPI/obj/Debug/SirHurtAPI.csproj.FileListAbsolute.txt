@@ -24,8 +24,12 @@ E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\xunit.abstractions.xml
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\xunit.core.xml
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\xunit.execution.desktop.xml
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Xunit.SkippableFact.xml
-E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csprojAssemblyReference.cache
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csproj.Fody.CopyLocal.cache
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csproj.CopyComplete
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.dll
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.pdb
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\bin\Debug\Newtonsoft.Json.xml
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.Properties.Resources.resources
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.ScriptHub.resources
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csproj.GenerateResource.cache
+E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI\obj\Debug\SirHurtAPI.csprojAssemblyReference.cache
