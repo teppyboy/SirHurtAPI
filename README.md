@@ -46,7 +46,7 @@ class Scripts:
 ```
 ### Bugs (so don't judge me by not telling bugs)
 - When enabled auto inject then quit RBX while injecting then the app will lag :/
-- If you use isNewVersionAvailable() then u download latest SirHurtAPI.dll to replace this then your app will get error about Access is denied. To fix that you must use an external app to download and replace SirHurtAPI.dll
+- If you use isNewVersionAvailable() then u download latest SirHurtAPI.dll to replace this then your app will get error about Access is denied. To fix that you must use an external app to download and replace SirHurtAPI.dll or Wait a second using Thread.Sleep or await Task.Delay then update the dll
 ### Old bugs (fixed now)
 - Execute(string script, true) will cause loop with revert forever that cause user might couldn't execute script. (Sorry for not notice fast bc i forgot my GitHub password XD)
 - Won't auto-update sirhurt dll
