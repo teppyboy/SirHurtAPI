@@ -29,19 +29,19 @@ class Scripts:
 + bool OwlHub() - Execute Owl Hub and return true if sucess and false if failed
 + bool FluxBreak() - Execute FluxBreak and return true if sucess and false if failed
 + bool KiwiiDecompiler() - Execute Kiwii's Decompiler and return true if sucess and false if failed
-+ bool UnNamedESP() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SirHurtScriptHub() - Execute Owl Hub and return true if sucess and false if failed
-+ bool MadCityMenu() - Execute Owl Hub and return true if sucess and false if failed
-+ bool MadCityHaxx() - Execute Owl Hub and return true if sucess and false if failed
-+ bool PhantomX() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SteamSniper() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SirHurtMultiTool() - Execute Owl Hub and return true if sucess and false if failed
-+ bool ScriptHunter() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SimpleESP() - Execute Owl Hub and return true if sucess and false if failed
-+ bool ProjectBullDukey() - Execute Owl Hub and return true if sucess and false if failed
-+ bool DarkDex() - Execute Owl Hub and return true if sucess and false if failed
-+ bool R2SV3() - Execute Owl Hub and return true if sucess and false if failed
-+ bool KiwiiPF() - Execute Owl Hub and return true if sucess and false if failed
++ bool UnNamedESP() - Execute UnNamed ESP and return true if sucess and false if failed
++ bool SirHurtScriptHub() - Execute SirHurt Script Hub and return true if sucess and false if failed
++ bool MadCityMenu() - Execute Mad City Menu and return true if sucess and false if failed
++ bool MadCityHaxx() - Execute Mad City Haxx and return true if sucess and false if failed
++ bool PhantomX() - Execute PhantomX and return true if sucess and false if failed
++ bool SteamSniper() - Execute Steam Sniper and return true if sucess and false if failed
++ bool SirHurtMultiTool() - Execute SirHurt Multi Tool and return true if sucess and false if failed
++ bool ScriptHunter() - Execute Script Hunter and return true if sucess and false if failed
++ bool SimpleESP() - Execute Simple ESP and return true if sucess and false if failed
++ bool ProjectBullDukey() - Execute Project Bull-Dukey and return true if sucess and false if failed
++ bool DarkDex() - Execute Dark Dex and return true if sucess and false if failed
++ bool R2SV3() - Execute Remote2Script V3 and return true if sucess and false if failed
++ bool KiwiiPF() - Execute Kiwii's PF and return true if sucess and false if failed
 + bool OpenScriptHub() - Launch Script Hub (C# Form) and return true if sucess and false if failed
 ```
 ### Bugs (so don't judge me by not telling bugs)
@@ -64,23 +64,27 @@ class Scripts:
 ```
 - v1.0.5.0
 + YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
++ YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
++ YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
++ YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
++ YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
 * Added class Scripts:
 + bool OwlHub() - Execute Owl Hub and return true if sucess and false if failed
 + bool FluxBreak() - Execute FluxBreak and return true if sucess and false if failed
 + bool KiwiiDecompiler() - Execute Kiwii's Decompiler and return true if sucess and false if failed
-+ bool UnNamedESP() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SirHurtScriptHub() - Execute Owl Hub and return true if sucess and false if failed
-+ bool MadCityMenu() - Execute Owl Hub and return true if sucess and false if failed
-+ bool MadCityHaxx() - Execute Owl Hub and return true if sucess and false if failed
-+ bool PhantomX() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SteamSniper() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SirHurtMultiTool() - Execute Owl Hub and return true if sucess and false if failed
-+ bool ScriptHunter() - Execute Owl Hub and return true if sucess and false if failed
-+ bool SimpleESP() - Execute Owl Hub and return true if sucess and false if failed
-+ bool ProjectBullDukey() - Execute Owl Hub and return true if sucess and false if failed
-+ bool DarkDex() - Execute Owl Hub and return true if sucess and false if failed
-+ bool R2SV3() - Execute Owl Hub and return true if sucess and false if failed
-+ bool KiwiiPF() - Execute Owl Hub and return true if sucess and false if failed
++ bool UnNamedESP() - Execute UnNamed ESP and return true if sucess and false if failed
++ bool SirHurtScriptHub() - Execute SirHurt Script Hub and return true if sucess and false if failed
++ bool MadCityMenu() - Execute Mad City Menu and return true if sucess and false if failed
++ bool MadCityHaxx() - Execute Mad City Haxx and return true if sucess and false if failed
++ bool PhantomX() - Execute PhantomX and return true if sucess and false if failed
++ bool SteamSniper() - Execute Steam Sniper and return true if sucess and false if failed
++ bool SirHurtMultiTool() - Execute SirHurt Multi Tool and return true if sucess and false if failed
++ bool ScriptHunter() - Execute Script Hunter and return true if sucess and false if failed
++ bool SimpleESP() - Execute Simple ESP and return true if sucess and false if failed
++ bool ProjectBullDukey() - Execute Project Bull-Dukey and return true if sucess and false if failed
++ bool DarkDex() - Execute Dark Dex and return true if sucess and false if failed
++ bool R2SV3() - Execute Remote2Script V3 and return true if sucess and false if failed
++ bool KiwiiPF() - Execute Kiwii's PF and return true if sucess and false if failed
 + bool OpenScriptHub() - Launch Script Hub (C# Form) and return true if sucess and false if failed
 - v1.0.4.1
 + Fixed Execute won't do if u inject SirHurt in dir1 then u execute in dir2
