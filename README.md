@@ -29,6 +29,7 @@ class Experimental:
 + bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
 + bool LaunchExploit() - Download & Inject SirHurt V4 using Reloaded.Injector[And FASM + FASMX64 if not exist], return true if sucess and false if not.
 class Scripts:
++ bool OpenScriptHub() - Launch Intergated Script Hub (C# Form) and return true if sucess and false if failed
 + string[] DLScriptHub() - Download script hub and return all scripts in script hub name.
 + Tuple<string,string> GetScriptInfoFromName(tring ScriptName) - Get ScriptName Info (Image + Desc) and return a Tuple (Item1 = Description, Item2 = Image URL). If this failed it
 ll return a empty Tuple (Item1 and Item2 is empty.)
@@ -74,7 +75,6 @@ ll return a empty Tuple (Item1 and Item2 is empty.)
 + bool DarkDex() - Execute Dark Dex and return true if sucess and false if failed
 + bool R2SV3() - Execute Remote2Script V3 and return true if sucess and false if failed
 + bool KiwiiPF() - Execute Kiwii's PF and return true if sucess and false if failed
-+ bool OpenScriptHub() - Launch Script Hub (C# Form) and return true if sucess and false if failed
 << Added things >>
 + string[] DLScriptHub() - Download script hub and return all scripts in script hub name.
 + Tuple<string,string> GetScriptInfoFromName(tring ScriptName) - Get ScriptName Info (Image + Desc) and return a Tuple (Item1 = Description, Item2 = Image URL). If this failed it
