@@ -15,6 +15,18 @@ namespace SirHurtAPI_Demo_App
         public MainForm()
         {
             InitializeComponent();
+            if (SirHurtAPI.SirHurtAPI.GetAutoInject())
+            {
+                SirHurtAPI.SirHurtAPI.AutoInjectToggle();
+            }
+            if (SirHurtAPI.SirHurtAPI.getMultipleRBX())
+            {
+                SirHurtAPI.SirHurtAPI.multipleRBXToggle();
+            }
+            if (SirHurtAPI.Experimental.GetAutoInject())
+            {
+                SirHurtAPI.Experimental.AutoInjectToggle();
+            }
         }
 
         private void InjectBtn_Click(object sender, EventArgs e)
@@ -67,6 +79,22 @@ namespace SirHurtAPI_Demo_App
         private void openscripthub_Click(object sender, EventArgs e)
         {
             SirHurtAPI.Scripts.OpenScriptHub();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SirHurtAPI.SirHurtAPI.multipleRBXToggle();
+            button3.Text = "Multiple RBX: " + SirHurtAPI.SirHurtAPI.getMultipleRBX().ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new exmpleScriptHub().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SirHurtAPI.SirHurtAPI.oofRBX();
         }
     }
 }

@@ -125,7 +125,10 @@ namespace SirHurtAPI
             if (!GetAutoInject())
             {
                 setAutoIJStatus(true);
-                autoIJ();
+                Task.Run(async () =>
+                {
+                    await autoIJ();
+                }); ;
                 Console.WriteLine(DllName + "Enabled auto-inject");
             }
             else
@@ -198,7 +201,10 @@ namespace SirHurtAPI
                     SirHurtAPI.GetWindowThreadProcessId(intPtr, out SirHurtAPI._injectionResult);
                     SirHurtAPI.setInjectStatus(true);
                     isCheckingDetachDone = false;
-                    injectionCheckerThreadHandler();
+                    Task.Run(async () =>
+                    {
+                        await injectionCheckerThreadHandler();
+                    });
                 }
                 else
                 {
@@ -217,7 +223,7 @@ namespace SirHurtAPI
             while (!isCheckingDetachDone)
             {
                 Application.DoEvents();
-                Task.Delay(100);
+                await Task.Delay(100);
                 IntPtr intPtr = SirHurtAPI.FindWindowA("WINDOWSCLIENT", "Roblox");
                 uint num = 0U;
                 SirHurtAPI.GetWindowThreadProcessId(intPtr, out num);
@@ -227,7 +233,10 @@ namespace SirHurtAPI
                     SirHurtAPI.setInjectStatus(false);
                     if (GetAutoInject())
                     {
-                        autoIJ();
+                        await Task.Run(async () =>
+                        {
+                            await autoIJ();
+                        });
                     }
                     isCheckingDetachDone = true;
                 }

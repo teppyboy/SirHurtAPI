@@ -21,11 +21,43 @@ class SirHurtAPI:
 + bool isInjected() - Get injected status and return true = injected, false = not injected.
 + bool isNewVersionAvailable() - Check for new version of SirHurtAPI, if yes then return true, else return false
 + bool setInjectStatus(bool InjectStatus) - Set Inject status to true/false [For custom Inject method only!] [Don't use if you don't know anything or it'll break the inject status]
++ bool multipleRBXToggle() - Enable/Disable Multiple ROBLOX and return true = enabled, false = disabled.
++ bool oofRBX() - Kill all ROBLOX instance.
++ bool getMultipleRBX() - Get Multiple ROBLOX status and return true = enabled, false = disabled.
 class Experimental:
 + bool GetAutoInject() - Get Auto inject status and return true = enabled, false = disabled.
 + bool AutoInjectToggle() - Enable/Disable auto inject and return true = enabled, false = disabled.
 + bool LaunchExploit() - Download & Inject SirHurt V4 using Reloaded.Injector[And FASM + FASMX64 if not exist], return true if sucess and false if not.
 class Scripts:
++ string[] DLScriptHub() - Download script hub and return all scripts in script hub name.
++ Tuple<string,string> GetScriptInfoFromName(tring ScriptName) - Get ScriptName Info (Image + Desc) and return a Tuple (Item1 = Description, Item2 = Image URL). If this failed it
+ll return a empty Tuple (Item1 and Item2 is empty.)
++ bool ExecuteFromName(string ScriptName) - Execute script from ScriptName
+- This part maybe somewhat hard to understand so you can read the exmpleScriptHub.cs in SirHurtAPI Demo App.
+```
+### Bugs (so don't judge me by not telling bugs)
+- When enabled auto inject then quit RBX while injecting then the app will lag :/
+- If you use isNewVersionAvailable() then u download latest SirHurtAPI.dll to replace this then your app will get error about Access is denied. To fix that you must use an external app to download and replace SirHurtAPI.dll or Wait a second using Thread.Sleep or await Task.Delay then update the dll
+### Old bugs (fixed now)
+- Execute(string script, true) will cause loop with revert forever that cause user might couldn't execute script. (Sorry for not notice fast bc i forgot my GitHub password XD)
+- Won't auto-update sirhurt dll
+- SSl/TLS issue on windows 7
+- some script write/read file error due to no workspace folder
+- Execute won't do if u inject SirHurt in dir1 then u execute in dir2
+### Features
+- Easier to make SirHurt V4 custom ui.
+- Gay code but works
+- super cringe api, dosent use timer (Dosen't use System.Windows.Forms except intergated SCript Hub.).
+- DA WARUDOOOOOOOOOO
+- No axon (go check it its open source and theres no pipe lol)
+- Enterprise-sama
+### Changelog
+```
+- v1.0.6.0 | it's been a while.
++ Updated Inject URL (from asshurthosting.pw to sirhurt.pw)
++ Updated how to download DLL (No outdated version error anymore!)
+* Edited class Scripts:
+<< These things below are removed. >>
 + bool OwlHub() - Execute Owl Hub and return true if sucess and false if failed
 + bool FluxBreak() - Execute FluxBreak and return true if sucess and false if failed
 + bool KiwiiDecompiler() - Execute Kiwii's Decompiler and return true if sucess and false if failed
@@ -43,25 +75,17 @@ class Scripts:
 + bool R2SV3() - Execute Remote2Script V3 and return true if sucess and false if failed
 + bool KiwiiPF() - Execute Kiwii's PF and return true if sucess and false if failed
 + bool OpenScriptHub() - Launch Script Hub (C# Form) and return true if sucess and false if failed
-```
-### Bugs (so don't judge me by not telling bugs)
-- When enabled auto inject then quit RBX while injecting then the app will lag :/
-- If you use isNewVersionAvailable() then u download latest SirHurtAPI.dll to replace this then your app will get error about Access is denied. To fix that you must use an external app to download and replace SirHurtAPI.dll or Wait a second using Thread.Sleep or await Task.Delay then update the dll
-### Old bugs (fixed now)
-- Execute(string script, true) will cause loop with revert forever that cause user might couldn't execute script. (Sorry for not notice fast bc i forgot my GitHub password XD)
-- Won't auto-update sirhurt dll
-- SSl/TLS issue on windows 7
-- some script write/read file error due to no workspace folder
-- Execute won't do if u inject SirHurt in dir1 then u execute in dir2
-### Features
-- Easier to make SirHurt V4 custom ui.
-- Gay code but works
-- super cringe api, dosent use timer (Dosen't use System.Windows.Forms).
-- DA WARUDOOOOOOOOOO
-- No axon (go check it its open source and theres no pipe lol)
-- Enterprise-sama
-### Changelog
-```
+<< Added things >>
++ string[] DLScriptHub() - Download script hub and return all scripts in script hub name.
++ Tuple<string,string> GetScriptInfoFromName(tring ScriptName) - Get ScriptName Info (Image + Desc) and return a Tuple (Item1 = Description, Item2 = Image URL). If this failed it
+ll return a empty Tuple (Item1 and Item2 is empty.)
++ bool ExecuteFromName(string ScriptName) - Execute script from ScriptName
+- This part will be somewhat hard to understand so you can read the exmpleScriptHub.cs in SirHurtAPI Demo App.
+* Edited class SirHurtAPI:
+<< Added things >>
++ bool multipleRBXToggle() - Enable/Disable Multiple ROBLOX and return true = enabled, false = disabled.
++ bool oofRBX() - Kill all ROBLOX instance.
++ bool getMultipleRBX() - Get Multiple ROBLOX status and return true = enabled, false = disabled.
 - v1.0.5.0
 + YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO
 + YAYAYAYAYAYAY MY WAIFU ENTY GAVE ME VALENTINE CHOCOLATE IN AZURU LANEEE OWOWOWOWOWOWOWO

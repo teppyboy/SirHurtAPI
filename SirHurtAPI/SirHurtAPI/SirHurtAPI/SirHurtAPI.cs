@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Security;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
@@ -14,11 +18,13 @@ namespace SirHurtAPI
     {
         private static bool Injected = false;
         private static bool autoInject = false;
+        private static bool multipleRBX = false;
         private static bool isCleaning = false;
         private static bool isCheckingDetachDone = false;
         private static bool firstLaunch = true;
+        private static Mutex rbxmutex = null;
         internal static string SHdatPath = "sirhurt.dat";
-        private readonly static string ver = "1.0.5.0"; //Ah shit i have to do this
+        private readonly static string ver = "1.0.6.0"; //Ah shit i have to do this
         private readonly static string DllName = "[SirHurtAPI]";
         internal static bool AlwaysGoodCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors policyErrors)
         {
@@ -66,6 +72,18 @@ namespace SirHurtAPI
                 return false;
             }
         }
+        private static string CalculateMD5Hash(string input)
+        {
+            HashAlgorithm hashAlgorithm = MD5.Create();
+            byte[] bytes = Encoding.ASCII.GetBytes(input);
+            byte[] array = hashAlgorithm.ComputeHash(bytes);
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < array.Length; i++)
+            {
+                stringBuilder.Append(array[i].ToString("X2"));
+            }
+            return stringBuilder.ToString();
+        }
         public static bool DownloadDll(bool DownloadSirHurtInjector) // Why? because i will use this in my UI, TsuSploit.
         {
             bool returnval;
@@ -79,7 +97,7 @@ namespace SirHurtAPI
                         ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
                         ServicePointManager.Expect100Continue = true;
                         ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                        webClient.DownloadFile("https://asshurthosting.pw/asshurt/update/v4/SirHurtInjector.dll", "SirHurtInjector.dll");
+                        webClient.DownloadFile("https://sirhurt.net/asshurt/update/v4/SirHurtInjector.dll", "SirHurtInjector.dll");
                         Console.WriteLine(DllName + "Downloaded SirHurtInjector.dll");
                     } // Code from SirHurt Bootstrapper.
                     if (File.Exists("SirHurtInjector.dll") && new FileInfo("SirHurtInjector.dll").Length != 0)
@@ -117,11 +135,23 @@ namespace SirHurtAPI
             {
                 using (WebClient webClient = new WebClient())
                 {
+                    string text = webClient.DownloadString("https://sirhurt.net/asshurt/update/v4/fetch_version.php");
+                    string input = webClient.DownloadString("https://sirhurt.net/asshurt/update/v4/fetch_sirhurt_version.php");
+                    if (text == "Failed: A update has not yet been released for this ROBLOX build.")
+                    {
+                        MessageBox.Show("An error occured while trying to update to the latest version of SirHurt V4. SirHurt has not yet released a new build for this ROBLOX version. Try again later!");
+                        return false;
+                    }
+                    RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Asshurt", true);
+                    if (registryKey != null)
+                    {
+                        registryKey.SetValue("VHASH", CalculateMD5Hash(input), RegistryValueKind.String);
+                    }
                     Console.WriteLine(DllName + "Begin to download SirHurt.dll");
                     ServicePointManager.ServerCertificateValidationCallback += new RemoteCertificateValidationCallback(AlwaysGoodCertificate);
                     ServicePointManager.Expect100Continue = true;
                     ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                    webClient.DownloadFile("https://asshurthosting.pw/asshurt/update/v4/SirHurt.dll", "SirHurt.dll");
+                    webClient.DownloadFile(text, "SirHurt.dll");
                     Console.WriteLine(DllName + "Downloaded SirHurt.dll");
                 } // Code from SirHurt Bootstrapper.
                 if (File.Exists("SirHurt.dll") && new FileInfo("SirHurt.dll").Length != 0)
@@ -185,7 +215,10 @@ namespace SirHurtAPI
                     GetWindowThreadProcessId(intPtr, out _injectionResult);
                     setInjectStatus(true);
                     isCheckingDetachDone = false;
-                    injectionCheckerThreadHandler();
+                    Task.Run(async () =>
+                    {
+                        await injectionCheckerThreadHandler();
+                    });
                 }
                 else
                 {
@@ -254,7 +287,10 @@ namespace SirHurtAPI
                 if (firstLaunch && Injected && !isCheckingDetachDone)
                 {
                     firstLaunch = false;
-                    injectionCheckerThreadHandler();
+                    Task.Run(async () =>
+                    {
+                        await injectionCheckerThreadHandler();
+                    });
                 }
             }
             catch (Exception ex)
@@ -270,7 +306,10 @@ namespace SirHurtAPI
             if (!GetAutoInject())
             {
                 setAutoIJStatus(true);
-                autoIJ();
+                Task.Run(async () =>
+                {
+                    await autoIJ();
+                });;
                 Console.WriteLine(DllName + "Enabled auto-inject");
             }
             else
@@ -304,7 +343,7 @@ namespace SirHurtAPI
             while (!isCheckingDetachDone)
             {
                 Application.DoEvents();
-                Task.Delay(100);
+                await Task.Delay(100);
                 IntPtr intPtr = FindWindowA("WINDOWSCLIENT", "Roblox");
                 uint num = 0U;
                 GetWindowThreadProcessId(intPtr, out num);
@@ -314,7 +353,10 @@ namespace SirHurtAPI
                     setInjectStatus(false);
                     if (GetAutoInject())
                     {
-                        autoIJ();
+                        await Task.Run(async () =>
+                        {
+                            await autoIJ();
+                        });
                     }
                     isCheckingDetachDone = true;
                 }
@@ -384,6 +426,97 @@ namespace SirHurtAPI
                 }
                 return false;
             }
+        }
+        private static bool setMRBX(bool mRBXStatus)
+        {
+            try
+            {
+                var a = Registry.CurrentUser.CreateSubKey("SirHurtAPI");
+                a.SetValue("mRBX", mRBXStatus);
+                multipleRBX = mRBXStatus;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(DllName + "Cannot write mRBX status to registry");
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
+        public static bool getMultipleRBX()
+        {
+            try
+            {
+                var a = Registry.CurrentUser.OpenSubKey("SirHurtAPI");
+                multipleRBX = Convert.ToBoolean(a.GetValue("mRBX"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(DllName + "Cannot read auto inject status from registry, setting to false");
+                setMRBX(false);
+                Console.WriteLine(ex);
+            }
+            return multipleRBX;
+        }
+        private async static Task rbxTrack()
+        {
+            while (getMultipleRBX())
+            {
+                Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
+                if (pname.Length == 0)
+                {
+                    try
+                    {
+                        rbxmutex.Dispose();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(DllName + $"failed to dispose mutex (this is not a bad thing, its just bruh)\n{ex}");
+                    }
+                    rbxmutex = new Mutex(true, "ROBLOX_singletonMutex");
+                }
+                await Task.Delay(100);
+            }
+        }
+        public static bool multipleRBXToggle() //Why does everyone asking for this shit function ._.
+        {
+            if (!getMultipleRBX())
+            {
+                setMRBX(true);
+                Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
+                foreach (Process proc in pname)
+                {
+                    proc.Kill();
+                }
+                Task.Run(async () =>
+                {
+                    await rbxTrack();
+                });
+                Console.WriteLine(DllName + "Enabled mRBX");
+            }
+            else
+            {
+                try
+                {
+                    rbxmutex.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(DllName + $"failed to dispose mutex (this is not a bad thing, its just bruh)\n{ex}");
+                }
+                setMRBX(false);
+                Console.WriteLine(DllName + "Disabled mRBX");
+            }
+            return getMultipleRBX();
+        }
+        public static void oofRBX()
+        {
+            Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
+            foreach (Process proc in pname)
+            {
+                proc.Kill();
+            }
+            Console.WriteLine(DllName + "OK");
         }
         public static bool ExecuteFromFile(bool Forced) //@am ikea#1337 as you wish :|
         {

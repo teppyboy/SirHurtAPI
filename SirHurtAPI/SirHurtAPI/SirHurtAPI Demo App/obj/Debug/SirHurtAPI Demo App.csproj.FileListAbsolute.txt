@@ -27,3 +27,21 @@ E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Dem
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csproj.CopyComplete
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.exe
 E:\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.pdb
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\FASM-LICENSE.TXT
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\FASM.DLL
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\FASMX64.DLL
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\Reloaded.Assembler.targets
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI Demo App.exe.config
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI Demo App.exe
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI Demo App.pdb
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI.dll
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI.pdb
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\bin\Debug\SirHurtAPI.dll.config
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csprojAssemblyReference.cache
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI_Demo_App.exmpleScriptHub.resources
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI_Demo_App.MainForm.resources
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI_Demo_App.Properties.Resources.resources
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csproj.GenerateResource.cache
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.csproj.CopyComplete
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.exe
+D:\GitHubRepo\SirHurtAPI\SirHurtAPI\SirHurtAPI\SirHurtAPI Demo App\obj\Debug\SirHurtAPI Demo App.pdb

@@ -40,6 +40,9 @@
             this.AutoIJEx = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.openscripthub = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // scriptBox
@@ -63,7 +66,7 @@
             // 
             // Clear
             // 
-            this.Clear.Location = new System.Drawing.Point(577, 424);
+            this.Clear.Location = new System.Drawing.Point(418, 424);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(75, 23);
             this.Clear.TabIndex = 2;
@@ -75,7 +78,7 @@
             // 
             this.Execute.Location = new System.Drawing.Point(230, 424);
             this.Execute.Name = "Execute";
-            this.Execute.Size = new System.Drawing.Size(192, 23);
+            this.Execute.Size = new System.Drawing.Size(64, 23);
             this.Execute.TabIndex = 3;
             this.Execute.Text = "Execute";
             this.Execute.UseVisualStyleBackColor = true;
@@ -83,9 +86,9 @@
             // 
             // EFF
             // 
-            this.EFF.Location = new System.Drawing.Point(428, 424);
+            this.EFF.Location = new System.Drawing.Point(300, 424);
             this.EFF.Name = "EFF";
-            this.EFF.Size = new System.Drawing.Size(143, 23);
+            this.EFF.Size = new System.Drawing.Size(112, 23);
             this.EFF.TabIndex = 4;
             this.EFF.Text = "Execute from file";
             this.EFF.UseVisualStyleBackColor = true;
@@ -93,9 +96,9 @@
             // 
             // oof123
             // 
-            this.oof123.Location = new System.Drawing.Point(1, 2);
+            this.oof123.Location = new System.Drawing.Point(230, 2);
             this.oof123.Name = "oof123";
-            this.oof123.Size = new System.Drawing.Size(367, 23);
+            this.oof123.Size = new System.Drawing.Size(239, 23);
             this.oof123.TabIndex = 5;
             this.oof123.Text = "Auto Inject: False";
             this.oof123.UseVisualStyleBackColor = true;
@@ -117,9 +120,9 @@
             // 
             // AutoIJEx
             // 
-            this.AutoIJEx.Location = new System.Drawing.Point(374, 2);
+            this.AutoIJEx.Location = new System.Drawing.Point(471, 2);
             this.AutoIJEx.Name = "AutoIJEx";
-            this.AutoIJEx.Size = new System.Drawing.Size(346, 23);
+            this.AutoIJEx.Size = new System.Drawing.Size(249, 23);
             this.AutoIJEx.TabIndex = 7;
             this.AutoIJEx.Text = "Auto Inject [Experimental]: False";
             this.AutoIJEx.UseVisualStyleBackColor = true;
@@ -137,19 +140,52 @@
             // 
             // openscripthub
             // 
-            this.openscripthub.Location = new System.Drawing.Point(658, 424);
+            this.openscripthub.Location = new System.Drawing.Point(499, 424);
             this.openscripthub.Name = "openscripthub";
-            this.openscripthub.Size = new System.Drawing.Size(141, 23);
+            this.openscripthub.Size = new System.Drawing.Size(98, 23);
             this.openscripthub.TabIndex = 9;
             this.openscripthub.Text = "Open Script Hub";
             this.openscripthub.UseVisualStyleBackColor = true;
             this.openscripthub.Click += new System.EventHandler(this.openscripthub_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(603, 424);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(196, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Open Sample Script Hub";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(93, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(131, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Multiple RBX: False";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 23);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "OOF RBX";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.openscripthub);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AutoIJEx);
@@ -182,6 +218,9 @@
         private System.Windows.Forms.Button AutoIJEx;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button openscripthub;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

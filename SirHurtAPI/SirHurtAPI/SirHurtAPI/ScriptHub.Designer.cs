@@ -60,7 +60,6 @@
             this.previewImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.previewImg.TabIndex = 1;
             this.previewImg.TabStop = false;
-            this.previewImg.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.previewImg_LoadCompleted);
             // 
             // previewTxt
             // 

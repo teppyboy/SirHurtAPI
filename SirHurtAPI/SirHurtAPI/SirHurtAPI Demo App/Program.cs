@@ -31,7 +31,7 @@ namespace SirHurtAPI_Demo_App
                 // Update check
                 if (SirHurtAPI.SirHurtAPI.isNewVersionAvailable())
                 {
-                    Thread.Sleep(500); // Disconnect the dll before download
+                    Thread.Sleep(1000); // Disconnect the dll before download
                     var wc = new WebClient();
                     try
                     {
@@ -60,7 +60,7 @@ namespace SirHurtAPI_Demo_App
                     Console.WriteLine("Downloaded.");
                     Console.WriteLine("======================================");
                 }
-                Console.WriteLine("Please keep this console open, if close then the UI will be closed too.");
+                Console.WriteLine("Please keep this console open, if this is closed then the UI will be closed too.");
                 Application.Run(new MainForm());
             }
             else

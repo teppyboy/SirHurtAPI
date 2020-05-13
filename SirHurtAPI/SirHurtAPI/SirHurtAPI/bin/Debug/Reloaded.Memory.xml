@@ -1700,6 +1700,182 @@
              Limitation: Class cannot read structs larger than buffer size. This is not checked for!
              </summary>
         </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.Int16@)">
+            <summary>
+            Reads an unmanaged Int16 from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveInt16">
+            <summary>
+            Reads an unmanaged Int16 from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.Int16@)">
+            <summary>
+            Reads an unmanaged  Int16 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveInt16">
+            <summary>
+            Reads an unmanaged  Int16 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.UInt16@)">
+            <summary>
+            Reads an unmanaged UInt16 from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveUInt16">
+            <summary>
+            Reads an unmanaged UInt16 from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.UInt16@)">
+            <summary>
+            Reads an unmanaged  UInt16 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveUInt16">
+            <summary>
+            Reads an unmanaged  UInt16 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.Int32@)">
+            <summary>
+            Reads an unmanaged Int32 from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveInt32">
+            <summary>
+            Reads an unmanaged Int32 from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.Int32@)">
+            <summary>
+            Reads an unmanaged  Int32 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveInt32">
+            <summary>
+            Reads an unmanaged  Int32 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.UInt32@)">
+            <summary>
+            Reads an unmanaged UInt32 from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveUInt32">
+            <summary>
+            Reads an unmanaged UInt32 from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.UInt32@)">
+            <summary>
+            Reads an unmanaged  UInt32 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveUInt32">
+            <summary>
+            Reads an unmanaged  UInt32 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.Int64@)">
+            <summary>
+            Reads an unmanaged Int64 from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveInt64">
+            <summary>
+            Reads an unmanaged Int64 from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.Int64@)">
+            <summary>
+            Reads an unmanaged  Int64 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveInt64">
+            <summary>
+            Reads an unmanaged  Int64 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.UInt64@)">
+            <summary>
+            Reads an unmanaged UInt64 from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveUInt64">
+            <summary>
+            Reads an unmanaged UInt64 from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.UInt64@)">
+            <summary>
+            Reads an unmanaged  UInt64 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveUInt64">
+            <summary>
+            Reads an unmanaged  UInt64 from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.Single@)">
+            <summary>
+            Reads an unmanaged Single from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveSingle">
+            <summary>
+            Reads an unmanaged Single from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.Single@)">
+            <summary>
+            Reads an unmanaged  Single from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveSingle">
+            <summary>
+            Reads an unmanaged  Single from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive(System.Double@)">
+            <summary>
+            Reads an unmanaged Double from the stream, swapping the endian of the output.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitiveDouble">
+            <summary>
+            Reads an unmanaged Double from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive(System.Double@)">
+            <summary>
+            Reads an unmanaged  Double from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitiveDouble">
+            <summary>
+            Reads an unmanaged  Double from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
         <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.BaseStream">
             <summary>
             Gets the stream this class was instantiated with.
@@ -1767,6 +1943,44 @@
             </summary>
             <param name="value">The value to output.</param>
         </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.Read``1(System.Boolean)">
+            <summary>
+            Reads a managed or unmanaged generic type from the stream.
+            Note: For performance recommend using other overload if reading unmanaged type (i.e. marshal = false)
+            </summary>
+            <param name="marshal">Set to true to perform marshalling on the value being read, else false.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.Read``1">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.Peek``1(``0@,System.Boolean)">
+            <summary>
+            Reads a managed or unmanaged generic type from the stream without incrementing the position.
+            Note: For performance recommend using other overload if reading unmanaged type (i.e. marshal = false)
+            </summary>
+            <param name="value">The value to output.</param>
+            <param name="marshal">Set to true to perform marshalling on the value being read, else false.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.Peek``1(``0@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.Peek``1(System.Boolean)">
+            <summary>
+            Reads a managed or unmanaged generic type from the stream without incrementing the position.
+            Note: For performance recommend using other overload if reading unmanaged type (i.e. marshal = false)
+            </summary>
+            <param name="marshal">Set to true to perform marshalling on the value being read, else false.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.Peek``1">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
         <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive``1(``0@)">
             <summary>
             Reads an unmanaged primitive from the stream, swapping the endian of the output.
@@ -1779,6 +1993,41 @@
             The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
             </summary>
             <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianPrimitive``1">
+            <summary>
+            Reads an unmanaged primitive from the stream, swapping the endian of the output.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.ReadBigEndianStruct``1">
+            <summary>
+            Reads an unmanaged struct from the stream, swapping the endian of the output.
+            The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive``1(``0@)">
+            <summary>
+            Reads an unmanaged primitive from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianStruct``1(``0@)">
+            <summary>
+            Reads an unmanaged struct from the stream, swapping the endian of the output without incrementing the position.
+            The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianPrimitive``1">
+            <summary>
+            Reads an unmanaged primitive from the stream, swapping the endian of the output without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.PeekBigEndianStruct``1">
+            <summary>
+            Reads an unmanaged struct from the stream, swapping the endian of the output without incrementing the position.
+            The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
+            </summary>
         </member>
         <member name="M:Reloaded.Memory.Streams.BufferedStreamReader.CanRead(System.Int32)">
             <summary>
@@ -1815,6 +2064,969 @@
             </summary>
             <param name="offset">The offset relative to the current position to seek to.</param>
             <returns>Returns true if the seek was successful, else false.</returns>
+        </member>
+        <member name="T:Reloaded.Memory.Streams.ExtendedMemoryStream">
+            <summary>
+            An extended version of the <see cref="T:System.IO.MemoryStream"/> class that allows you to directly add generic structs to the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Byte)">
+            <summary>
+            Appends a Big Endian byte onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Byte[])">
+            <summary>
+            Appends an array of Big Endian byte(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.SByte)">
+            <summary>
+            Appends a Big Endian sbyte onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.SByte[])">
+            <summary>
+            Appends an array of Big Endian sbyte(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Int16)">
+            <summary>
+            Appends a Big Endian short onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Int16[])">
+            <summary>
+            Appends an array of Big Endian short(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.UInt16)">
+            <summary>
+            Appends a Big Endian ushort onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.UInt16[])">
+            <summary>
+            Appends an array of Big Endian ushort(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Int32)">
+            <summary>
+            Appends a Big Endian int onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Int32[])">
+            <summary>
+            Appends an array of Big Endian int(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.UInt32)">
+            <summary>
+            Appends a Big Endian uint onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.UInt32[])">
+            <summary>
+            Appends an array of Big Endian uint(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Int64)">
+            <summary>
+            Appends a Big Endian long onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Int64[])">
+            <summary>
+            Appends an array of Big Endian long(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.UInt64)">
+            <summary>
+            Appends a Big Endian ulong onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.UInt64[])">
+            <summary>
+            Appends an array of Big Endian ulong(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Single)">
+            <summary>
+            Appends a Big Endian float onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Single[])">
+            <summary>
+            Appends an array of Big Endian float(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Double)">
+            <summary>
+            Appends a Big Endian double onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive(System.Double[])">
+            <summary>
+            Appends an array of Big Endian double(s) onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.#ctor(System.Byte[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.#ctor(System.Byte[],System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.#ctor(System.Byte[],System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.#ctor(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.AddPadding(System.Int32)">
+            <summary>
+            Pads the stream with 0x00 bytes until it is aligned.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.AddPadding(System.Byte,System.Int32)">
+            <summary>
+            Pads the stream with <see cref="!:value"/> bytes until it is aligned.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.Write``1(``0[])">
+            <summary>
+            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.Write``1(``0[],System.Boolean)">
+            <summary>
+            Appends an managed/marshalled structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.Write``1(``0)">
+            <summary>
+            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.Write``1(``0,System.Boolean)">
+            <summary>
+            Appends a managed/marshalled structure onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.Write(System.Byte[])">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive``1(``0[])">
+            <summary>
+            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianStruct``1(``0[])">
+            <summary>
+            Appends an managed/marshalled structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianPrimitive``1(``0)">
+            <summary>
+            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.ExtendedMemoryStream.WriteBigEndianStruct``1(``0)">
+            <summary>
+            Appends a managed/marshalled structure onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="T:Reloaded.Memory.Streams.Readers.BigEndianStreamReader">
+            <summary>
+            A version of <see cref="T:Reloaded.Memory.Streams.Readers.EndianStreamReader"/> that reads data in Big Endian mode.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.#ctor(Reloaded.Memory.Streams.BufferedStreamReader)">
+            <summary>
+            Constructs a <see cref="T:Reloaded.Memory.Streams.Readers.EndianStreamReader"/> given an existing stream reader.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read``1(``0@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read``1">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek``1(``0@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek``1">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadStruct``1(``0@)">
+            <summary>
+            Reads an unmanaged struct from the stream, swapping the endian of the output.
+            The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadStruct``1">
+            <summary>
+            Reads an unmanaged struct from the stream, swapping the endian of the output.
+            The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekStruct``1(``0@)">
+            <summary>
+            Reads an unmanaged struct from the stream, swapping the endian of the output without incrementing the position.
+            The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekStruct``1">
+            <summary>
+            Reads an unmanaged struct from the stream, swapping the endian of the output without incrementing the position.
+            The structure read should implement the <see cref="T:Reloaded.Memory.IEndianReversible"/> interface.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.Int16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.Int16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.UInt16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadUInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.UInt16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekUInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.UInt32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadUInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.UInt32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekUInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.Int64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.Int64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.UInt64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadUInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.UInt64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekUInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadSingle">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekSingle">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Read(System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.ReadDouble">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.Peek(System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.BigEndianStreamReader.PeekDouble">
+            <inheritdoc />
+        </member>
+        <member name="T:Reloaded.Memory.Streams.Readers.EndianStreamReader">
+            <summary>
+            An abstract class that abstracts <see cref="T:Reloaded.Memory.Streams.BufferedStreamReader"/>, allowing for individual implementations for each endian.
+            </summary>
+            <summary>
+            An abstract class that abstracts <see cref="T:Reloaded.Memory.Streams.BufferedStreamReader"/>, allowing for individual implementations for each endian.
+            </summary>
+        </member>
+        <member name="P:Reloaded.Memory.Streams.Readers.EndianStreamReader.Reader">
+            <summary>
+            The underlying Stream Reader assigned to this reader.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.BaseStream">
+            <summary>
+            Gets the stream this class was instantiated with.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.BufferBytesAvailable">
+            <summary>
+            Gets the remaining number of bytes that are currently buffered.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.CurrentBufferSize">
+            <summary>
+            Gets the total size of the current buffered data at this moment in time.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Position">
+            <summary>
+            The current position of the buffer.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.#ctor(Reloaded.Memory.Streams.BufferedStreamReader)">
+            <summary>
+            Constructs a <see cref="T:Reloaded.Memory.Streams.Readers.EndianStreamReader"/> given an existing stream reader.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Finalize">
+            <summary/>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read``1(``0@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read``1">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek``1(``0@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek``1">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Seeks the underlying stream to a specified position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadBytes(System.Int64,System.Int32)">
+             <summary>
+             Reads a specified amount of bytes at a specific offset from the underlying stream without
+             resetting the buffers or advancing the read pointer.
+            
+             Note: This method is intended only for reading of large size raw data e.g. compressed file data in an archive.
+                   No optimizations are performed for this action.
+             </summary>
+             <param name="offset">The offset of the data from the start of the stream.</param>
+             <param name="count">The amount of bytes to read.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.CanRead(System.Int32)">
+            <summary>
+            Returns true if the <see cref="T:Reloaded.Memory.Streams.BufferedStreamReader"/> has sufficient space buffered
+            to read memory of given size.
+            </summary>
+            <param name="size">The size of the item to check if can be read, in bytes.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.Int16@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadInt16">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.Int16@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekInt16">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.UInt16@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadUInt16">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.UInt16@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekUInt16">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.Int32@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadInt32">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.Int32@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekInt32">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.UInt32@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadUInt32">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.UInt32@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekUInt32">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.Int64@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadInt64">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.Int64@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekInt64">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.UInt64@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadUInt64">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.UInt64@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekUInt64">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.Single@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadSingle">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.Single@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekSingle">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Read(System.Double@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.ReadDouble">
+            <summary>
+            Reads an unmanaged, generic type from the stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.Peek(System.Double@)">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+            <param name="value">The value to output.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.EndianStreamReader.PeekDouble">
+            <summary>
+            Reads an unmanaged, generic type from the stream without incrementing the position.
+            </summary>
+        </member>
+        <member name="T:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader">
+            <summary>
+            A version of <see cref="T:Reloaded.Memory.Streams.Readers.EndianStreamReader"/> that reads data in Little Endian mode.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.#ctor(Reloaded.Memory.Streams.BufferedStreamReader)">
+            <summary>
+            Constructs a <see cref="T:Reloaded.Memory.Streams.Readers.EndianStreamReader"/> given an existing stream reader.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read``1(``0@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read``1">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek``1(``0@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek``1">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read``1(``0@,System.Boolean)">
+            <summary>
+            Reads a managed or unmanaged generic type from the stream.
+            Note: For performance recommend using other overload if reading unmanaged type (i.e. marshal = false)
+            </summary>
+            <param name="value">The value to output.</param>
+            <param name="marshal">Set to true to perform marshalling on the value being read, else false.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read``1(System.Boolean)">
+            <summary>
+            Reads a managed or unmanaged generic type from the stream.
+            Note: For performance recommend using other overload if reading unmanaged type (i.e. marshal = false)
+            </summary>
+            <param name="marshal">Set to true to perform marshalling on the value being read, else false.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek``1(``0@,System.Boolean)">
+            <summary>
+            Reads a managed or unmanaged generic type from the stream without incrementing the position.
+            Note: For performance recommend using other overload if reading unmanaged type (i.e. marshal = false)
+            </summary>
+            <param name="value">The value to output.</param>
+            <param name="marshal">Set to true to perform marshalling on the value being read, else false.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek``1(System.Boolean)">
+            <summary>
+            Reads a managed or unmanaged generic type from the stream without incrementing the position.
+            Note: For performance recommend using other overload if reading unmanaged type (i.e. marshal = false)
+            </summary>
+            <param name="marshal">Set to true to perform marshalling on the value being read, else false.</param>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.Int16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.Int16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.UInt16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadUInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.UInt16@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekUInt16">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.Int32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.UInt32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadUInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.UInt32@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekUInt32">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.Int64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.Int64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.UInt64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadUInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.UInt64@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekUInt64">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadSingle">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.Single@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekSingle">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Read(System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.ReadDouble">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.Peek(System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Readers.LittleEndianStreamReader.PeekDouble">
+            <inheritdoc />
+        </member>
+        <member name="T:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream">
+            <summary>
+            A version of <see cref="T:Reloaded.Memory.Streams.Writers.EndianMemoryStream"/> that writes data in Big Endian mode.
+            </summary>
+            <summary>
+            A version of <see cref="T:Reloaded.Memory.Streams.Writers.EndianMemoryStream"/> that writes data in Big Endian mode.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.#ctor(Reloaded.Memory.Streams.ExtendedMemoryStream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.Write``1(``0[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.Write``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteStruct``1(``0[])">
+            <summary>
+            Appends an managed/marshalled structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteStruct``1(``0)">
+            <summary>
+            Appends a managed/marshalled structure onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteInt16(System.Int16)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteUInt16(System.UInt16)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteInt32(System.Int32)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteUInt32(System.UInt32)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteInt64(System.Int64)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteUInt64(System.UInt64)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteSingle(System.Single)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.BigEndianMemoryStream.WriteDouble(System.Double)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="T:Reloaded.Memory.Streams.Writers.EndianMemoryStream">
+            <summary>
+            An abstract class that abstracts <see cref="T:Reloaded.Memory.Streams.Writers.EndianMemoryStream"/>, allowing for individual implementations for each endian.
+            </summary>
+        </member>
+        <member name="P:Reloaded.Memory.Streams.Writers.EndianMemoryStream.Stream">
+            <summary>
+            The underlying Stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.#ctor(Reloaded.Memory.Streams.ExtendedMemoryStream)">
+            <summary>
+            Constructs a <see cref="T:Reloaded.Memory.Streams.Writers.EndianMemoryStream"/> given an existing stream.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.Finalize">
+            <summary/>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.AddPadding(System.Int32)">
+            <summary>
+            Pads the stream with 0x00 bytes until it is aligned.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.AddPadding(System.Byte,System.Int32)">
+            <summary>
+            Pads the stream with <see cref="!:value"/> bytes until it is aligned.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.Write(System.Byte[])">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.Write``1(``0[])">
+            <summary>
+            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.Write``1(``0)">
+            <summary>
+            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.ToArray">
+            <summary>
+            Converts the underlying stream to an array.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteInt16(System.Int16)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteUInt16(System.UInt16)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteInt32(System.Int32)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteUInt32(System.UInt32)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteInt64(System.Int64)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteUInt64(System.UInt64)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteSingle(System.Single)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.EndianMemoryStream.WriteDouble(System.Double)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="T:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream">
+            <summary>
+            A version of <see cref="T:Reloaded.Memory.Streams.Writers.EndianMemoryStream"/> that writes data in Little Endian mode.
+            </summary>
+            <summary>
+            A version of <see cref="T:Reloaded.Memory.Streams.Writers.EndianMemoryStream"/> that writes data in Big Endian mode.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.#ctor(Reloaded.Memory.Streams.ExtendedMemoryStream)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.Write``1(``0[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.Write``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.Write``1(``0[],System.Boolean)">
+            <summary>
+            Appends an managed/marshalled structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.Write``1(``0,System.Boolean)">
+            <summary>
+            Appends a managed/marshalled structure onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteInt16(System.Int16)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteUInt16(System.UInt16)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteInt32(System.Int32)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteUInt32(System.UInt32)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteInt64(System.Int64)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteUInt64(System.UInt64)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteSingle(System.Single)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
+        </member>
+        <member name="M:Reloaded.Memory.Streams.Writers.LittleEndianMemoryStream.WriteDouble(System.Double)">
+            <summary>
+            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
+            </summary>
         </member>
         <member name="T:Reloaded.Memory.Struct">
             <summary>
@@ -1987,6 +3199,40 @@
             <param name="data">A byte array containing data from which to extract a structure from.</param>
             <param name="length">The amount of elements to read from the span.</param>
         </member>
+        <member name="M:Reloaded.Memory.StructArray.FromArrayBigEndianPrimitive``1(System.Byte[],``0[]@,System.Int32,System.Int32)">
+            <summary>
+            Converts a byte array to a specified Big Endian primitive.
+            </summary>
+            <param name="value">Local variable to receive the read in struct array.</param>
+            <param name="data">A byte array containing data from which to extract a structure from.</param>
+            <param name="startIndex">The index in the byte array to read the element(s) from.</param>
+            <param name="length">The amount of elements to read from the byte array.</param>
+        </member>
+        <member name="M:Reloaded.Memory.StructArray.FromArrayBigEndianPrimitive``1(System.Span{System.Byte},``0[]@,System.Int32)">
+            <summary>
+            Converts a span to a specified Big Endian primitive.
+            </summary>
+            <param name="value">Local variable to receive the read in struct array.</param>
+            <param name="data">A byte array containing data from which to extract a structure from.</param>
+            <param name="length">The amount of elements to read from the span.</param>
+        </member>
+        <member name="M:Reloaded.Memory.StructArray.FromArrayBigEndianStruct``1(System.Byte[],``0[]@,System.Int32,System.Int32)">
+            <summary>
+            Converts a byte array to a specified Big Endian structure or class type with explicit StructLayout attribute and <see cref="T:Reloaded.Memory.IEndianReversible"/>.
+            </summary>
+            <param name="value">Local variable to receive the read in struct array.</param>
+            <param name="data">A byte array containing data from which to extract a structure from.</param>
+            <param name="startIndex">The index in the byte array to read the element(s) from.</param>
+            <param name="length">The amount of elements to read from the byte array.</param>
+        </member>
+        <member name="M:Reloaded.Memory.StructArray.FromArrayBigEndianStruct``1(System.Span{System.Byte},``0[]@,System.Int32)">
+            <summary>
+            Converts a span to a specified Big Endian structure or class type with explicit StructLayout attribute and <see cref="T:Reloaded.Memory.IEndianReversible"/>..
+            </summary>
+            <param name="value">Local variable to receive the read in struct array.</param>
+            <param name="data">A byte array containing data from which to extract a structure from.</param>
+            <param name="length">The amount of elements to read from the span.</param>
+        </member>
         <member name="M:Reloaded.Memory.StructArray.GetSize``1(System.Int32,System.Boolean)">
             <summary>
             Returns the size of a specific primitive or struct type.
@@ -2101,67 +3347,6 @@
         </member>
         <member name="M:Reloaded.Memory.Utilities.CircularBuffer.Dispose">
             <summary/>
-        </member>
-        <member name="T:Reloaded.Memory.Utilities.ExtendedMemoryStream">
-            <summary>
-            An extended version of the <see cref="T:System.IO.MemoryStream"/> class that allows you to directly add generic structs to the stream.
-            </summary>
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.#ctor">
-            <inheritdoc />
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.#ctor(System.Byte[])">
-            <inheritdoc />
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.#ctor(System.Byte[],System.Boolean)">
-            <inheritdoc />
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.#ctor(System.Byte[],System.Int32,System.Int32)">
-            <inheritdoc />
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean)">
-            <inheritdoc />
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.#ctor(System.Byte[],System.Int32,System.Int32,System.Boolean,System.Boolean)">
-            <inheritdoc />
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.#ctor(System.Int32)">
-            <inheritdoc />
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.AddPadding(System.Int32)">
-            <summary>
-            Pads the stream with 0x00 bytes until it is aligned.
-            </summary>
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.AddPadding(System.Byte,System.Int32)">
-            <summary>
-            Pads the stream with <see cref="!:value"/> bytes until it is aligned.
-            </summary>
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.Write``1(``0[])">
-            <summary>
-            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
-            </summary>
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.Write``1(``0[],System.Boolean)">
-            <summary>
-            Appends an managed/marshalled structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
-            </summary>
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.Write``1(``0)">
-            <summary>
-            Appends an unmanaged structure onto the <see cref="T:System.IO.MemoryStream"/> and advances the position.
-            </summary>
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.Write``1(``0,System.Boolean)">
-            <summary>
-            Appends a managed/marshalled structure onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
-            </summary>
-        </member>
-        <member name="M:Reloaded.Memory.Utilities.ExtendedMemoryStream.Write(System.Byte[])">
-            <summary>
-            Appends bytes onto the given <see cref="T:System.IO.MemoryStream"/> and advances the position.
-            </summary>
         </member>
     </members>
 </doc>
