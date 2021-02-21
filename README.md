@@ -1,3 +1,5 @@
+## This repository is ARCHIVED, if I ever use SirHurt again then I'll unarchive the project but the chances is almost none because free exploits already satisfy my needs (Krnl, Fluxus, etc..). You can still fork this project and maintain it but the code is very broken.
+## Read [this issue](https://github.com/teppyboy/SirHurtAPI/issues/8#issuecomment-670091747) for more info.
 # SirHurtAPI
  - An API that support SirHurt V4 for developers easier to make SirHurt V4 custom UI
  - **THIS DOSEN'T GIVE YOU ABILITY TO USE SIRHURT FOR FREE**
@@ -152,4 +154,6 @@ ll return a empty Tuple (Item1 and Item2 is empty.)
 + Inital support SirHurt V3
 + Inital release.
 ```
-enjoy xd 
++ enjoy xd 
++ rin best waifu
++ also go watch horimiya i think its worth a try.
